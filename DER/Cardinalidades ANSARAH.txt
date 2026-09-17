@@ -1,0 +1,29 @@
+Cardinalidades ANSARAH
+
+| #  | Relacionamento                       | Cardinalidade |
+| -- | -------------------------------------- | ------------- |
+| 1  | **Departamento — Funcionário**         | **1:N**       |
+| 2  | **Marca — Produto**                    | **1:N**       |
+| 3  | **Fornecedor — Produto**               | **1:N**       |
+| 4  | **Produto — Cor**                      | **1:N**       |
+| 5  | **Produto — Tamanho**                  | **1:N**       |
+| 6  | **Produto — Produto_SKU**              | **1:N**       |
+| 7  | **Cor — Produto_SKU**                  | **1:N**       |
+| 8  | **Tamanho — Produto_SKU**              | **1:N**       |
+| 9  | **Produto_SKU — Estoque**              | **1:1**       |
+| 10 | **Venda — Item_Venda**                 | **1:N**       |
+| 11 | **Produto_SKU — Item_Venda**           | **1:N**       |
+| 12 | **Cliente — Venda**                    | **1:N**       |
+| 13 | **Cliente — Pedido_Online**            | **1:N**       |
+| 14 | **Pedido_Online — Item_Pedido**        | **1:N**       |
+| 15 | **Produto_SKU — Item_Pedido**          | **1:N**       |
+| 16 | **Produto_SKU — Histórico_Preço**      | **1:N**       |
+| 17 | **Tabela_Preço — Histórico_Preço**     | **1:N**       |
+| 18 | **Cliente — Troca_Devolução**          | **1:N**       |
+| 19 | **Venda — Troca_Devolução**            | **1:N**       |
+| 20 | **Pedido_Online — Troca_Devolução**    | **1:N**       |
+| 21 | **Pedido_Compra — Item_Pedido_Compra** | **1:N**       |
+| 22 | **Produto_SKU — Item_Pedido_Compra**   | **1:N**       |
+| 23 | **Fornecedor — Pedido_Compra**         | **1:N**       |
+| 24 | **Funcionário — Venda**                | **1:N**       |
+| 25 | **Funcionário — Pedido_Compra**        | **1:N**       |
