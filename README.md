@@ -1,6 +1,11 @@
 # Modelagem de Banco de Dados para Gestão de Informações da Ansarah
 Projeto acadêmico de modelagem de Banco de Dados da empresa ANSARAH - UNICID
 
+#Integrantes
+-Ana Beatriz
+-Luiz Gustavo Santos de Oliveira
+-Samantha Paula dos Santos Silva
+
 ## 1. Introdução
 
 Este trabalho apresenta a modelagem conceitual de um banco de dados para a Ansarah, empresa do segmento de moda e vestuário. O objetivo é representar as principais informações e processos da organização, organizando os dados de forma estruturada para apoiar uma futura implementação de banco de dados.
