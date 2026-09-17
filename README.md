@@ -278,7 +278,7 @@ O modelo ainda poderá ser validado e refinado pela equipe antes da elaboração
   Brás: https://maps.app.goo.gl/SKGrzBL6uDV7w4WL8
 
 - **CNPJ.BIZ.** Consulta de registro da organização.  
-  > **Adicionar/confirmar o link completo utilizado pela equipe.**
+  > **(https://cnpj.biz/61419610000119)**
 
 ---
 
