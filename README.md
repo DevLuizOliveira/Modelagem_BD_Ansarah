@@ -19,17 +19,16 @@ O projeto tem como delimitação a modelagem conceitual das informações e dos 
 
 ## 2. Caracterização da Organização
 
-A Ansarah atua no comércio do segmento de moda e vestuário. Sua história teve início em 1932, na Rua 25 de Março, em São Paulo, inicialmente com a venda de meias. Ao longo do tempo, a empresa ampliou sua atuação para lingerie e outros tipos de vestuário.
+**Nome e natureza da organização:** A Ansarah é uma empresa comercial, pertencente ao segmento de moda e vestuário. Sua história começou em 1932, na Rua 25 de Março, em São Paulo, inicialmente com a comercialização de meias. Ao longo dos anos, a empresa expandiu sua atuação para moda íntima, lingerie e outros tipos de vestuário, comercializando atualmente diversos produtos por meio de lojas físicas e loja virtual. 
+</br></br>
+**Contexto e porte:** A Ansarah é uma empresa com fins lucrativos, com uma operação consolidada no segmento de moda e vestuário. Possui entre 50 e 100 funcionários, loja física, loja virtual e centro de logística, realizando vendas no varejo e no atacado para todo o país.
+</br></br>
+**Problemas e necessidades identificados:** Os principais problemas identificados estão relacionados à inserção manual das informações no sistema, especialmente no cadastro de produtos, à dificuldade de criação de relatórios personalizados e à recuperação das informações após a perda ou restauração de um backup. Nesses casos, é necessário retornar a um backup anterior e realizar novamente, de forma manual, a inserção das informações que não estavam presentes na versão recuperada, o que pode gerar retrabalho e aumentar o risco de perda ou desatualização dos dados. Dessa forma, identifica-se a necessidade de otimizar a inserção e atualização das informações no sistema, facilitar a obtenção de informações para apoio à tomada de decisão e melhorar os mecanismos relacionados à recuperação dos dados. 
+</br></br>
+**Justificativa da escolha:** a Ansarah foi escolhida porque o grupo possui acesso à organização por meio de contato com seu responsável. Uma das integrantes do grupo possui vínculo familiar com uma funcionária da empresa, o que possibilitou o contato e a realização da pesquisa de campo. Além disso, a organização possui diversos processos de negócio adequados à aplicação dos conceitos de banco de dados. 
 
-Atualmente, a organização possui lojas físicas e loja virtual, além de centro logístico, atuando no varejo e no atacado em âmbito nacional. A organização possui aproximadamente 50 a 100 funcionários.
-
-Entre os problemas identificados estão:
-
-- Inserção manual de dados, principalmente no cadastro de produtos;
-- Dificuldade para gerar relatórios personalizados;
-- Problemas relacionados à recuperação de dados após restauração de backup;
-- Necessidade de reinserção manual de informações que não estejam presentes na versão recuperada;
-- Risco de retrabalho e perda ou desatualização de informações.
+</br></br>
+**Evidências da organização:** Para comprovar a existência da organização e o acesso do grupo para a realização da pesquisa de campo, foram reunidas informações e registros relacionados à Ansarah. Como evidências, serão apresentados: 
 
 ---
 
