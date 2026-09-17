@@ -2,9 +2,9 @@
 Projeto acadêmico de modelagem de Banco de Dados da empresa ANSARAH - UNICID
 
 #Integrantes
--Ana Beatriz
--Luiz Gustavo Santos de Oliveira
--Samantha Paula dos Santos Silva
+- **Ana Beatriz Mendes Gonçalves**
+- **Luiz Gustavo Santos de Oliveira**
+- **Samantha Paula dos Santos Silva**
 
 ## 1. Introdução
 
