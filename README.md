@@ -204,69 +204,21 @@ Ele apresenta as entidades, atributos, chaves primárias (PK), chaves estrangeir
 
 ## 10. Justificativa Técnica do Modelo
 
-O modelo conceitual organiza as informações da organização, reduzindo a concentração e a duplicação de dados e preparando uma futura implementação do modelo relacional.
 
-A entidade **Produto** é central no modelo. A entidade **Produto_SKU** representa as variações dos produtos, evitando a duplicação das informações gerais do produto. As entidades **Cor** e **Tamanho** são separadas para permitir reutilização.
-
-A entidade **Estoque** está relacionada ao SKU. As entidades **Venda** e **Item_Venda** representam as vendas e seus itens, enquanto **Pedido_Online** e **Item_Pedido** representam os pedidos realizados pela loja virtual.
-
-As entidades **Tabela_Preco** e **Historico_Preco** permitem representar o controle de preços.
-
-As entidades **Fornecedor**, **Pedido_Compra** e **Item_Pedido_Compra** representam o processo de compras.
-
-A entidade **Troca_Devolucao** registra ocorrências relacionadas a trocas, devoluções e cancelamentos.
-
-As entidades **Funcionário** e **Departamento** representam a organização interna, enquanto **Cliente** está relacionado às vendas e aos pedidos.
-
-O atributo `valor_total` da entidade **Venda** não foi incluído por ser calculável a partir da quantidade, preço unitário e desconto dos itens.
-
-As chaves primárias identificam unicamente os registros e as chaves estrangeiras estabelecem os relacionamentos entre as entidades, servindo como base para uma futura implementação do banco de dados relacional.
 
 ---
 
 ## 11. Uso de Inteligência Artificial
 
-### 11.1 Ferramenta utilizada
 
-**ChatGPT**
 
-### 11.2 Aplicação da IA
 
-A inteligência artificial foi utilizada como apoio na elaboração do questionário e na organização e estruturação do conteúdo do trabalho.
-
-### 11.3 Prompts utilizados
-
-**Prompt 1:**
-
-> Orientação para entrevistar uma pequena loja de roupas e elaborar perguntas sobre processos, dados, estoque, vendas, clientes, fornecedores, funcionários, relatórios, segurança e dificuldades do sistema.
-
-**Prompt 2:**
-
-> Orientação para organizar o conteúdo conforme a rota do professor, contemplando Introdução, Caracterização da Organização, Processos de Negócio, Requisitos Funcionais, Requisitos Não Funcionais, Regras de Negócio e Dicionário de Dados.
-
-### 11.4 Participação da IA no trabalho
-
-A IA auxiliou na elaboração das perguntas e na organização das informações, além de sugerir possíveis entidades, atributos e relacionamentos.
-
-As sugestões foram analisadas pela equipe e algumas foram rejeitadas ou corrigidas quando não correspondiam à realidade da organização ou não haviam sido confirmadas pela pesquisa.
-
-As informações sobre a empresa foram definidas a partir da entrevista com a representante da Ansarah, pesquisa de campo e fontes públicas utilizadas pela equipe.
-
-A IA foi utilizada como **ferramenta de apoio**, e não como fonte definitiva das informações da empresa.
-
-A versão final foi definida pelo grupo com base nos dados levantados e nas orientações da disciplina.
 
 ---
 
 ## 12. Conclusão
 
-A pesquisa de campo permitiu identificar os principais processos relacionados a produtos e suas variações, estoque, clientes, funcionários e departamentos, vendas, fornecedores e marcas, preços, pedidos online, pedidos de compra, trocas e devoluções, relatórios e controle de acesso.
 
-Entre as principais dificuldades identificadas estão a inserção manual de informações, especialmente no cadastro de produtos, a geração de relatórios personalizados e a correção ou recuperação de dados.
-
-O modelo conceitual proposto organiza essas informações e representa os principais relacionamentos identificados.
-
-O modelo ainda poderá ser validado e refinado pela equipe antes da elaboração do modelo lógico, da implementação em SQL e da criação das consultas.
 
 ---
 
