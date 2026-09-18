@@ -54,7 +54,7 @@ https://www.ansarah.com.br/
 
 ### 3.4 Consulta de CNPJ
 
-> **Adicionar aqui o link completo utilizado pela equipe para a consulta do CNPJ da organização.**
+> **https://cnpj.biz/61419610000119**
 
 ### 3.5 Comunicação com a organização
 
