@@ -34,7 +34,7 @@ O projeto tem como delimitação a modelagem conceitual das informações e dos 
 
 ## 3. Evidências da Pesquisa
 
-As evidências da pesquisa de campo estão **anexadas no repositório**, incluindo fotografias das lojas, registros de comunicação e respostas do questionário.
+Para comprovar a existência da organização e o acesso do grupo para a realização da pesquisa de campo, foram reunidas informações e registros relacionados à Ansarah.
 
 ### 3.1 Fotos das lojas
 
@@ -59,7 +59,7 @@ https://www.ansarah.com.br/
 
 ### 3.5 Comunicação com a organização
 
-Os registros da comunicação com Alessandra, incluindo **áudio, prints e questionário**, estão **anexados no repositório**.
+Os registros da comunicação com Alessandra (uma das proprietárias da organização e responsável pelo setor financeiro) incluindo **áudio, prints e questionário**, estão **anexados no repositório**.
 
 ---
 
