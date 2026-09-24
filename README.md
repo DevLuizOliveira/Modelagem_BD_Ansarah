@@ -82,21 +82,21 @@ Principais processos mapeados:
 
 ### 4.1 DESCRIÇÃO DOS PRINCIPAIS PROCESSOS
 
-Cadastro de produtos: os produtos são cadastrados manualmente no sistema de gestão empresarial utilizando informações fornecidas pelas fábricas, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo, informações fiscais e demais características do produto.
+*Cadastro de produtos:* os produtos são cadastrados manualmente no sistema de gestão empresarial utilizando informações fornecidas pelas fábricas, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo, informações fiscais e demais características do produto.
 <br><br>
-Controle de estoque: as quantidades dos produtos são registradas e acompanhadas no sistema. A organização utiliza o sistema para verificar disponibilidade, identificar produtos com estoque baixo ou sem estoque e acompanhar produtos com baixo giro.
+*Controle de estoque:* as quantidades dos produtos são registradas e acompanhadas no sistema. A organização utiliza o sistema para verificar disponibilidade, identificar produtos com estoque baixo ou sem estoque e acompanhar produtos com baixo giro.
 <br><br>
-Cadastro de clientes: os dados dos clientes são cadastrados no sistema, incluindo informações de identificação e contato. No comércio eletrônico, essas informações devem receber tratamento adequado em relação à privacidade.
+*Cadastro de clientes:* os dados dos clientes são cadastrados no sistema, incluindo informações de identificação e contato. No comércio eletrônico, essas informações devem receber tratamento adequado em relação à privacidade.
 <br><br>
-Registro de vendas: as vendas realizadas no Ponto de Venda e no site são registradas no sistema. Cada venda possui informações como data, canal, desconto, forma de pagamento, funcionário responsável e seus respectivos itens.
+*Registro de vendas:* as vendas realizadas no Ponto de Venda e no site são registradas no sistema. Cada venda possui informações como data, canal, desconto, forma de pagamento, funcionário responsável e seus respectivos itens.
 <br><br>
-Processamento de pedidos online: os pedidos realizados pelo site passam por etapas de aprovação do pagamento, separação, conferência/bipagem, faturamento, envio, rastreamento e entrega. Também podem ocorrer cancelamentos e reembolsos.
+*Processamento de pedidos online:* os pedidos realizados pelo site passam por etapas de aprovação do pagamento, separação, conferência/bipagem, faturamento, envio, rastreamento e entrega. Também podem ocorrer cancelamentos e reembolsos.
 <br><br>
-Controle de preços: a organização utiliza diferentes preços conforme o canal de venda e o tipo de cliente. Alterações de preços e descontos dependem de autorização da diretoria.
+*Controle de preços:* a organização utiliza diferentes preços conforme o canal de venda e o tipo de cliente. Alterações de preços e descontos dependem de autorização da diretoria.
 <br><br>
-Trocas e devoluções: as solicitações são registradas e o produto devolvido passa por conferência antes da conclusão da operação. Quando necessário, é realizado o estorno.
+*Trocas e devoluções:* as solicitações são registradas e o produto devolvido passa por conferência antes da conclusão da operação. Quando necessário, é realizado o estorno.
 <br><br>
-Reposição de produtos: são registrados pedidos de reposição junto aos fornecedores, contendo os produtos/variações solicitados, suas quantidades, preços e informações relacionadas à entrega.
+*Reposição de produtos:* são registrados pedidos de reposição junto aos fornecedores, contendo os produtos/variações solicitados, suas quantidades, preços e informações relacionadas à entrega.
 
 <br><br>
 
@@ -108,96 +108,138 @@ Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Re
 
 *Requisitos Funcionais*
 
- 
-
-
-
-
-
-
----
-
-## 6. Requisitos Não Funcionais
-
 | Código | Requisito |
 |---|---|
-| **RNF01** | **Segurança:** proteger as informações contra acessos não autorizados. |
-| **RNF02** | **Privacidade:** atender à LGPD. |
-| **RNF03** | **Controle de acesso:** cada funcionário deve acessar somente as informações necessárias à sua função/departamento. |
-| **RNF04** | **Backup:** realizar backups periódicos. |
-| **RNF05** | **Recuperação de dados:** permitir restauração a partir de backups em casos de perda ou inconsistência. |
-| **RNF06** | **Integridade:** reduzir duplicidades e informações inconsistentes ou desatualizadas. |
-| **RNF07** | **Usabilidade:** facilitar a inserção e atualização de informações, especialmente de produtos. |
-| **RNF08** | **Compatibilidade:** permitir acesso nos computadores e notebooks utilizados pela organização. |
-| **RNF09** | **Desempenho:** manter consultas e relatórios adequados à rotina. |
+| RF01 | O sistema deve permitir cadastrar produtos informando código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e demais informações de cadastro utilizadas pela organização. |
+| RF02 | O sistema deve permitir atualizar os dados cadastrais dos produtos, incluindo descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. |
+| RF03 | O sistema deve permitir cadastrar marcas e associá-las aos respectivos produtos. |
+| RF04 | O sistema deve permitir cadastrar fornecedores, armazenando CNPJ, razão social e nomedo fornecedor. |
+| RF05 | O sistema deve permitir registrar pedidos de reposição vinculados a fornecedores e contendo os produtos/variações, quantidades e preços solicitados. |
+| RF06 | O sistema deve permitir cadastrar clientes com nome, documentos, endereço, telefone e e-mail. |
+| RF07 | O sistema deve permitir consultar o histórico de compras de um cliente a partir das vendas registradas. |
+| RF08 | O sistema deve permitir registrar vendas contendo data, canal de venda, forma de pagamento, desconto, funcionário responsável e itens comercializados. |
+| RF09 | O sistema deve permitir registrar, para cada item de venda, a quantidade, o preço unitário, o desconto e a variação do produto comercializada. |
+| RF10 | O sistema deve permitir controlar o estoque das variações dos produtos e registrar as respectivas quantidades e atualizações de inventário. |
+| RF11 | O sistema deve permitir cadastrar e relacionar as variações dos produtos às respectivas cores e tamanhos. |
+| RF12 | O sistema deve permitir cadastrar tabelas de preços conforme o canal de venda e o tipo de cliente. |
+| RF13 | O sistema deve permitir registrar o histórico dos preços aplicados às variações dos produtos, incluindo o preço e o período de vigência. |
+| RF14 | O sistema deve permitir registrar pedidos realizados pelo site, incluindo data, status do pedido, status do pagamento, rastreamento, envio e entrega. |
+| RF15 | O sistema deve permitir associar um pedido online à venda correspondente e aos respectivos itens comercializados. |
+| RF16 | O sistema deve permitir acompanhar as etapas do pedido online, incluindo pagamento, separação, conferência, faturamento, envio, rastreamento e entrega. |
+| RF17 | O sistema deve permitir registrar ocorrências de troca, devolução e cancelamento relacionadas aos pedidos online, incluindo motivo, data, status e valor de estorno quando aplicável. |
+| RF18 | O sistema deve permitir gerar relatórios de faturamento, estoque, produtos, marcas, clientes, categorias e comparativos de vendas. |
+| RF19 | O sistema deve permitir controlar usuários e suas permissões de acesso de acordo com o departamento e a função exercida. |
+| RF20 | O sistema deve permitir realizar backups das informações armazenadas e recuperar os dados a partir de uma cópia de segurança quando necessário. |
+
+ 
+
+*Requisitos Não Funcionais*
+
+| Requisito | Descrição |
+|---|---|
+| RNF01 — Segurança | O sistema deve proteger os dados armazenados contra acessos não autorizados. |
+| RNF02 — Privacidade | Os dados pessoais dos clientes devem ser tratados de acordo com a LGPD. (Lei Geral de Proteção de Dados Pessoais) |
+| RNF03 — Controle de acesso | O sistema deve permitir restringir o acesso às informações conforme o departamento e as permissões atribuídas a cada funcionário. |
+| RNF04 — Backup | O sistema deve realizar cópias de segurança periódicas dos dados armazenados. |
+| RNF05 — Recuperação de dados | O sistema deve permitir recuperar informações a partir de backups em caso de perda ou inconsistência dos dados. |
+| RNF06 — Integridade dos dados | O sistema deve utilizar mecanismos que reduzam a ocorrência de registros duplicados, inconsistentes ou desatualizados. |
+| RNF07 — Usabilidade | O sistema deve facilitar o preenchimento, consulta e atualização das informações, principalmente durante o cadastro manual de produtos. |
+| RNF08 — Compatibilidade | O sistema deve ser acessível por computadores e notebooks, dispositivos utilizados atualmente pela organização. |
+| RNF09 — Desempenho | O sistema deve apresentar tempo de resposta adequado para consultas, registros e geração dos relatórios utilizados na rotina da organização. |
 
 ---
 
 ## 7. Regras de Negócio
 
-| Código | Regra |
-|---|---|
-| **RN01** | O cadastro de produtos no ERP utiliza informações fornecidas pelas fábricas. |
-| **RN02** | Os produtos possuem referência, coleção, categoria, marca, cor e tamanho. |
-| **RN03** | O estoque é controlado pelo ERP, integrado à loja física e ao e-commerce. |
-| **RN04** | As vendas são registradas no sistema. |
-| **RN05** | Os pedidos online possuem etapas como pagamento, separação, conferência, faturamento, envio, rastreamento, entrega, cancelamento e reembolso. |
-| **RN06** | Trocas e devoluções exigem a conferência do produto antes da conclusão. |
-| **RN07** | As informações dos clientes online devem ser protegidas conforme as regras de privacidade aplicáveis. |
-| **RN08** | Os prazos de troca seguem o Código de Defesa do Consumidor. |
-| **RN09** | Clientes B2C e B2B podem possuir diferentes prazos de pagamento, descontos e condições. |
-| **RN10** | Alterações de preços e descontos dependem da aprovação da diretoria. |
-| **RN11** | O acesso ao sistema segue as permissões definidas para cada departamento. |
-| **RN12** | O tratamento dos dados pessoais dos clientes observa a LGPD. |
 
+As regras de negócio foram definidas a partir das informações obtidas durante o levantamento realizado com a representante da Ansarah.
+
+*Regras operacionais*
+<br><br>
+| Código | Regra operacional | Descrição |
+|---|---|---|
+| RN01 | Cadastro de produtos | O cadastro de cada produto deve ser realizado no sistema de gestão empresarial utilizando as informações fornecidas pelas fábricas, incluindo código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. |
+| RN02 | Variações de produtos | As variações dos produtos devem ser controladas de acordo com as grades de cor e tamanho utilizadas pela organização. |
+| RN03 | Controle de estoque | As quantidades disponíveis das variações dos produtos devem ser controladas pelo sistema de gestão empresarial, considerando a integração entre a loja física e o comércio eletrônico. |
+| RN04 | Registro de vendas | Toda venda realizada pela organização deve ser registrada no sistema, contendo os dados da venda e os respectivos itens comercializados. |
+| RN05 | Itens da venda | Cada item de venda deve identificar a variação do produto comercializada, sua quantidade, preço unitário e desconto aplicado. |
+| RN06 | Pedidos online | Os pedidos realizados pelo site devem possuir informações referentes ao pagamento, separação, conferência, faturamento, envio, rastreamento e entrega. |
+| RN07 | Trocas e devoluções | Antes da conclusão de uma troca ou devolução, o produto retornado deve passar por conferência. |
+| RN08 | Cancelamentos | O cancelamento de um pedido pode ocorrer antes do envio, seguindo o processo definido pela organização para o estorno do pagamento. |
+| RN09 | Histórico de preços | As alterações de preços devem ser registradas de forma que seja possível identificar o valor aplicado à respectiva variação do produto e seu período de vigência. |
+
+*Regras operacionais*
+<br><br>
+| Código | Regra operacional | Descrição |
+|---|---|---|
+| RN10 | Prazos de troca | Os prazos e condições para trocas devem seguir as disposições aplicáveis do Código de Defesa do Consumidor. |
+| RN11 | Condições B2C e B2B | As condições comerciais para clientes B2C e B2B podem apresentar diferentes prazos de pagamento, descontos e demais condições comerciais. |
+| RN12 | Alteração de preços | A alteração de preços e a concessão de descontos dependem de autorização da diretoria. |
+| RN13 | Permissões de acesso | O acesso às informações do sistema deve respeitar as permissões atribuídas aos funcionários conforme seus departamentos e funções. |
+| RN14 | Proteção dos dados pessoais | As informações pessoais dos clientes devem ser tratadas de acordo com as regras estabelecidas pela LGPD. |
+| RN15 | Reposição de produtos | Os pedidos de reposição devem ser associados a um fornecedor e devem informar as variações dos produtos, quantidades e preços solicitados. |
 ---
 
-## 8. Modelo Entidade-Relacionamento
+## 8. Modelo Conceitual (Entidade-Relacionamento-Atributos)
 
-O modelo conceitual foi desenvolvido com base nos requisitos funcionais, requisitos não funcionais e regras de negócio levantados durante a pesquisa.
+Entidades reconhecidas
+<br><br>
+A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais:
+•*	Cliente:* representa os clientes cadastrados pela organização. 
+•*	Funcionário:*. representa os funcionários envolvidos nos processos da organização. 
+•	*Departamento:* representa os setores responsáveis pelas atividades da empresa. 
+•*	Produto:* representa os produtos comercializados pela organização. 
+•*	Produto_SKU:* representa as variações específicas dos produtos, associadas às características de cor e tamanho. 
+•	*Marca:* representa as marcas comercializadas pela organização. 
+•*	Fornecedor:* representa os fornecedores cadastrados no sistema. 
+•	*Cor:* representa as cores utilizadas nas variações dos produtos. 
+•	*Tamanho:* representa os tamanhos utilizados nas variações dos produtos. 
+•*	Estoque:* representa o controle das quantidades disponíveis das variações dos produtos. 
+•*	Venda:* representa as vendas realizadas pela organização. 
+•	*Item_Venda:* representa cada item que compõe uma venda, incluindo a quantidade, preço unitário, desconto e produto/variação comercializado. 
+•*	Pedido_Online:* representa os pedidos realizados pelo site. 
+•*	Tabela_Preco:* representa as diferentes tabelas de preços utilizadas pela organização. 
+•	*Historico_Preco:* registra os preços aplicados às variações dos produtos ao longo do tempo. 
+•	*Troca_Devolucao:* representa ocorrências de troca, devolução ou cancelamento relacionadas aos pedidos online. 
+•*	Pedido_Reposicao:* representa os pedidos realizados aos fornecedores para reposição de produtos. 
+•	*Item_Pedido_Reposicao:* representa cada produto/variação que faz parte de um pedido de reposição.
+<br><br>
+*Atributos e classificações*
+<br><br>
+Os atributos foram definidos a partir das informações obtidas durante a entrevista e representam os dados necessários para caracterizar as entidades e registrar os processos da organização.
+A entidade *Produto* concentra as informações gerais de cadastro, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais.
+A entidade *Produto_SKU* representa uma variação específica do produto, permitindo associar características como cor e tamanho sem repetir os dados gerais do produto.
+A entidade *Venda* armazena as informações gerais de cada venda, enquanto Item_Venda registra os produtos/variações comercializados, incluindo quantidade, preço unitário e desconto.
+Os *Pedidos_Online* possuem informações próprias do processo de venda pelo site, como status do pedido, status do pagamento, rastreamento, envio e entrega. A venda correspondente utiliza a entidade Item_Venda para registrar os produtos comercializados.
+A entidade *Historico_Preco* armazena o preço aplicado à variação do produto, sua tabela de preço e o período de vigência, permitindo manter o histórico das alterações de preço.
+<br><br>
+*Relacionamentos pertinentes*
+<br><br>
+Os relacionamentos identificados no modelo são:<br><br>
+•	Departamento possui Funcionários; 
+•	Marca possui Produtos; 
+•	Produto possui Produto_SKU; 
+•	Cor possui Produto_SKU; 
+•	Tamanho possui Produto_SKU; 
+•	Produto_SKU possui Estoque; 
+•	Cliente está associado às Vendas; 
+•	Funcionário registra Vendas; 
+•	Venda possui Itens_Venda; 
+•	Produto_SKU compõe Itens_Venda; 
+•	Cliente realiza Pedidos_Online; 
+•	Pedido_Online gera a Venda correspondente; 
+•	Tabela_Preco possui registros de Historico_Preco; 
+•	Produto_SKU possui registros de Historico_Preco; 
+•	Pedido_Online possui ocorrências de Troca_Devolucao; 
+•	Fornecedor recebe Pedidos_Reposicao; 
+•	Pedido_Reposicao possui Itens_Pedido_Reposicao; 
+•	Produto_SKU compõe Itens_Pedido_Reposicao. <br><br>
+As cardinalidades são representadas no DER conforme as relações identificadas no levantamento.
 
-### 8.1 Entidades
 
-As entidades identificadas no modelo são:
 
-- Cliente
-- Funcionário
-- Departamento
-- Produto
-- Marca
-- Fornecedor
-- Cor
-- Tamanho
-- Estoque
-- Venda
-- Item_Venda
-- Pedido_Online
-- Item_Pedido
-- Tabela_Preco
-- Historico_Preco
-- Troca_Devolucao
-- Produto_SKU
-- Pedido_Compra
-- Item_Pedido_Compra
 
-### 8.2 Relacionamentos principais
-
-- Cliente realiza vendas e pedidos online;
-- Funcionário pertence a departamento e registra vendas;
-- Produto pertence a marca, possui variações e possui estoque;
-- Venda possui itens;
-- Produto compõe itens de venda;
-- Pedido_Online pertence a cliente e possui itens;
-- Produto compõe itens de pedido;
-- Produto possui histórico de preços;
-- Tabela_Preco possui registros;
-- Pedido_Online pode possuir troca, devolução ou cancelamento;
-- Produto_SKU possui estoque;
-- Produto_SKU compõe itens de venda, pedidos e compras;
-- Pedido_Compra possui itens;
-- Fornecedor possui pedidos de compra.
-
-### 8.3 DER
+### 9. DER Diagrama Entidade-Relacionamento 
 
 O **Diagrama Entidade-Relacionamento (DER)** está **anexado no repositório**.
 
@@ -205,37 +247,51 @@ O **Diagrama Entidade-Relacionamento (DER)** está **anexado no repositório**.
 
 ---
 
-## 9. Dicionário de Dados
+## 10. Dicionário de Dados
 
 O **Dicionário de Dados** está **anexado no repositório**.
 
 Ele apresenta as entidades, atributos, chaves primárias (PK), chaves estrangeiras (FK) e demais informações definidas para o modelo.
 
-> **Arquivo/Documento do Dicionário de Dados: anexado no repositório.**
+> **Arquivo do Dicionário de Dados: anexado no repositório.**
 
 ---
 
-## 10. Justificativa Técnica do Modelo
+## 11. Justificativa Técnica do Modelo
+<br><br>
+A modelagem conceitual foi desenvolvida com o objetivo de organizar as informações da Ansarah de forma estruturada, representando as principais entidades envolvidas nos processos de cadastro, vendas, estoque, preços, pedidos online, reposição e atendimento de ocorrências.<br><br>
+A entidade Produto concentra as informações gerais dos produtos comercializados pela organização, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. O preço não foi mantido diretamente nessa entidade, pois a organização trabalha com diferentes tabelas de preços e realiza alterações de valores ao longo do tempo.<br><br>
+A entidade Produto_SKU foi utilizada para representar as variações específicas dos produtos. Essa estrutura permite associar uma determinada variação às características de Cor e Tamanho, evitando a repetição das informações gerais do produto.
+As entidades Cor e Tamanho foram separadas para permitir que essas características sejam reutilizadas em diferentes variações de produtos.<br><br>
+A entidade Estoque foi separada para representar o controle das quantidades disponíveis das variações dos produtos. Dessa forma, o estoque pode ser relacionado ao respectivo Produto_SKU.<br><br>
+A entidade Venda representa as informações gerais das vendas realizadas pela organização. A entidade Item_Venda representa os produtos que compõem cada venda, permitindo registrar a quantidade, o preço unitário e o desconto aplicado a cada item.<br><br>
+A entidade Pedido_Online representa as informações específicas dos pedidos realizados pelo site, como status, pagamento, rastreamento, envio e entrega. Como a organização utiliza os mesmos registros de itens para representar os produtos comercializados, o pedido online é associado à venda correspondente, que possui os respectivos Itens_Venda. Dessa forma, não é necessária uma entidade separada chamada Item_Pedido.<br><br>
+A entidade Tabela_Preco foi criada para representar as diferentes tabelas de preços utilizadas pela organização, considerando características como canal de venda e tipo de cliente. A entidade Historico_Preco registra os valores aplicados aos produtos ao longo do tempo, permitindo identificar o preço utilizado em determinado período.
+As entidades Fornecedor, Pedido_Reposicao e Item_Pedido_Reposicao representam o processo de reposição de produtos. O Pedido_Reposicao registra a solicitação realizada junto ao fornecedor, enquanto o Item_Pedido_Reposicao identifica cada variação de produto solicitada, sua quantidade e seu preço.<br><br>
+A entidade Troca_Devolucao registra ocorrências relacionadas aos pedidos online, como trocas, devoluções e cancelamentos, permitindo armazenar informações como motivo, data, status e valor de estorno quando aplicável.<br><br>
+A entidade Funcionario foi relacionada à entidade Departamento, permitindo representar a distribuição dos funcionários pelos diferentes setores da organização. A entidade Cliente permite relacionar os clientes às vendas e aos pedidos online realizados.<br><br>
+O atributo valor_total_venda não foi incluído na entidade Venda, conforme orientação do professor, pois o valor pode ser obtido a partir dos itens da venda, considerando suas quantidades, preços unitários e descontos.<br><br>
+As chaves primárias (PK) identificam exclusivamente os registros de cada entidade. As chaves estrangeiras (FK), presentes no dicionário como referência para uma futura implementação relacional, representam as ligações entre as entidades. No modelo conceitual, essas ligações são representadas principalmente por meio dos relacionamentos e suas respectivas cardinalidades.<br><br>
+A estrutura proposta busca reduzir a duplicidade de informações, organizar os dados de acordo com os processos identificados na organização e permitir futuras expansões do sistema.
+<br><br>
+
+---
+
+## 12. Uso de Inteligência Artificial
+
+
 
 
 
 ---
 
-## 11. Uso de Inteligência Artificial
-
-
-
-
-
----
-
-## 12. Conclusão
+## 13. Conclusão
 
 
 
 ---
 
-## 13. Referências
+## 14. Referências
 
 - **ANSARAH.** Informações institucionais e comerciais.  
   https://www.ansarah.com.br/
