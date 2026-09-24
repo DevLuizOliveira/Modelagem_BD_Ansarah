@@ -278,7 +278,16 @@ A estrutura proposta busca reduzir a duplicidade de informações, organizar os 
 ---
 
 ## 12. Uso de Inteligência Artificial
-
+| Item | Registro |
+|---|---|
+| Ferramenta e etapa | ChatGPT — elaboração do questionário para levantamento de requisitos e estruturação/ organização do README |
+| Motivação | Auxiliar o grupo na elaboração das perguntas para a entrevista, e na organização das informações obtidas |
+| Prompt(s) utilizados | Levantamento de requisitos: “Estamos realizando um trabalho de Banco de Dados no qual precisamos entrevistar uma organização de pequeno porte e levantar requisitos para desenvolver um modelo conceitual. A organização é uma loja de roupas. Crie perguntas que nos ajudem a entender os processos, dados utilizados, estoque, vendas, clientes, fornecedores, funcionários, relatórios, segurança e dificuldades do sistema. <br><br> Organização do trabalho: “Com base nas informações obtidas na entrevista com a Ansarah, explique como o conteúdo do trabalho deve ser organizado de acordo com o roteiro do professor. Explique também quais informações devem ser apresentadas no, Processos de Negócio, Requisitos Funcionais, Requisitos Não Funcionais, Regras de Negócio e como deverá ser feito o Dicionário de Dados." |
+| Resposta recebida | A IA sugeriu perguntas sobre produtos, estoque, vendas, clientes, fornecedores, pedidos, relatórios, segurança e processos internos. Também auxiliou na organização das informações nas seções do trabalho e sugeriu entidades, atributos, relacionamentos e cardinalidades preliminares para o MER/DER. |
+| Fontes consultadas e verificadas | As informações sobre a organização foram obtidas por meio da entrevista com a representante da Ansarah e complementadas por pesquisas em fontes públicas, como consulta de CNPJ e perfil da empresa no LinkedIn. O conteúdo também foi confrontado com o roteiro disponibilizado pelo professor. As sugestões da IA foram utilizadas apenas como apoio e não como fonte de informações sobre a empresa. |
+| Trechos rejeitados ou corrigidos | Algumas perguntas, informações, regras e trechos sugeridos pela IA foram retirados, reformulados ou corrigidos por não serem relevantes ou por não terem sido confirmados pela organização. |
+| Justificativa da escolha final | A versão final será definida pelo grupo com base na pesquisa de campo e nas orientações da disciplina. |
+| Reflexão crítica | A IA foi utilizada como ferramenta de apoio, organização e escrita, mas suas sugestões não foram consideradas como informações definitivas sobre a empresa. As respostas da entrevista e as decisões do grupo foram utilizadas para validar e adaptar o conteúdo. |
 
 
 
@@ -286,6 +295,10 @@ A estrutura proposta busca reduzir a duplicidade de informações, organizar os 
 ---
 
 ## 13. Conclusão
+A pesquisa realizada com a Ansarah, por meio de perguntas direcionadas à organização, possibilitou compreender os principais processos relacionados ao gerenciamento de suas informações. Foram identificadas atividades envolvendo produtos, variações de produtos, estoque, clientes, funcionários, departamentos, vendas, fornecedores, marcas, preços, pedidos online, pedidos de reposição, trocas, devoluções, relatórios e controle de acesso.
+A principal dificuldade identificada está relacionada à inserção manual das informações, especialmente no cadastro de produtos, além da customização de relatórios e da necessidade de correções ou recuperação de dados em determinadas situações.
+Com base nessas informações, foi elaborada uma proposta de modelo conceitual que organiza as principais entidades, atributos e relacionamentos identificados durante o levantamento. O modelo considera também as variações dos produtos por meio da entidade Produto_SKU, além dos processos relacionados a vendas, pedidos online, estoque, controle de preços e reposição de produtos.
+O modelo conceitual será validado e refinado conforme novas informações sejam obtidas junto à organização. Após sua validação, ele servirá como base para as próximas etapas do projeto, incluindo a elaboração do modelo lógico, a implementação em SQL e o desenvolvimento de consultas ao banco de dados.
 
 
 
