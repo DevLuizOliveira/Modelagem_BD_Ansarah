@@ -65,19 +65,19 @@ Os registros da comunicação com Alessandra (uma das proprietárias da organiza
 ## 4. Principais Processos de Negócio
 
 Principais processos mapeados:
-
-•	Cadastro e atualização de produtos; 
-•	Cadastro e controle das variações de produtos por cor e tamanho; 
-•	Controle de estoque e inventário; 
-•	Cadastro de clientes; 
+ <br>
+•	Cadastro e atualização de produtos;  <br>
+•	Cadastro e controle das variações de produtos por cor e tamanho; <br>
+•	Controle de estoque e inventário;  <br>
+•	Cadastro de clientes;  <br>
 •	Cadastro e relacionamento com fornecedores e marcas; 
-•	Registro de vendas no Ponto de Venda (PDV) e no site; 
-•	Controle de preços e promoções; 
-•	Processamento e acompanhamento de pedidos online; 
-•	Trocas, devoluções, cancelamentos e estornos; 
-•	Registro e acompanhamento de pedidos de reposição; 
-•	Geração de relatórios; 
-•	Controle de usuários e permissões de acesso.
+•	Registro de vendas no Ponto de Venda (PDV) e no site;  <br>
+•	Controle de preços e promoções;  <br>
+•	Processamento e acompanhamento de pedidos online;  <br>
+•	Trocas, devoluções, cancelamentos e estornos;  <br>
+•	Registro e acompanhamento de pedidos de reposição; <br>
+•	Geração de relatórios; <br> 
+•	Controle de usuários e permissões de acesso. <br>
 <br><br>
 
 ### 4.1 DESCRIÇÃO DOS PRINCIPAIS PROCESSOS
@@ -106,7 +106,7 @@ Principais processos mapeados:
 Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Requisitos Não Funcionais (RNF) *. Os Requisitos Funcionais representam as funcionalidades e operações que o sistema deve realizar, enquanto os Requisitos Não Funcionais representam características, restrições e condições relacionadas ao funcionamento do sistema, como segurança, desempenho, disponibilidade e recuperação dos dados.
 
 
-*Requisitos Funcionais*
+#*Requisitos Funcionais*
 
 | Código | Requisito |
 |---|---|
@@ -131,7 +131,9 @@ Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Re
 | RF19 | O sistema deve permitir controlar usuários e suas permissões de acesso de acordo com o departamento e a função exercida. |
 | RF20 | O sistema deve permitir realizar backups das informações armazenadas e recuperar os dados a partir de uma cópia de segurança quando necessário. |
 
- 
+ 
+
+
 
 *Requisitos Não Funcionais*
 
@@ -184,18 +186,31 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 
 Entidades reconhecidas
 <br><br>
-A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais:
-•*	Cliente:* representa os clientes cadastrados pela organização. 
-•*	Funcionário:*. representa os funcionários envolvidos nos processos da organização. 
+A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais: 
+br> <br>
+•*	Cliente:* representa os clientes cadastrados pela organização.
+br> <br>
+•*	Funcionário:*. representa os funcionários envolvidos nos processos da organização.
+br> <br>
 •	*Departamento:* representa os setores responsáveis pelas atividades da empresa. 
+br> <br>
 •*	Produto:* representa os produtos comercializados pela organização. 
-•*	Produto_SKU:* representa as variações específicas dos produtos, associadas às características de cor e tamanho. 
+br> <br>
+•*	Produto_SKU:* representa as variações específicas dos produtos, associadas às características de cor e tamanho.
+br> <br>
 •	*Marca:* representa as marcas comercializadas pela organização. 
-•*	Fornecedor:* representa os fornecedores cadastrados no sistema. 
-•	*Cor:* representa as cores utilizadas nas variações dos produtos. 
+br> <br>
+•*	Fornecedor:* representa os fornecedores cadastrados no sistema.
+br> <br>
+•	*Cor:* representa as cores utilizadas nas variações dos produtos.
+br> <br>
 •	*Tamanho:* representa os tamanhos utilizados nas variações dos produtos. 
-•*	Estoque:* representa o controle das quantidades disponíveis das variações dos produtos. 
-•*	Venda:* representa as vendas realizadas pela organização. 
+br> <br>
+•*	Estoque:* representa o controle das quantidades disponíveis das variações dos produtos.
+br> <br>
+•*	Venda:* representa as vendas realizadas pela organização.
+br> <br>
+
 •	*Item_Venda:* representa cada item que compõe uma venda, incluindo a quantidade, preço unitário, desconto e produto/variação comercializado. 
 •*	Pedido_Online:* representa os pedidos realizados pelo site. 
 •*	Tabela_Preco:* representa as diferentes tabelas de preços utilizadas pela organização. 
