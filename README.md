@@ -187,29 +187,29 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 Entidades reconhecidas
 <br><br>
 A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais: 
-br> <br>
+<br> <br>
 •*	Cliente:* representa os clientes cadastrados pela organização.
-br> <br>
+<br> <br>
 •*	Funcionário:*. representa os funcionários envolvidos nos processos da organização.
-br> <br>
+<br> <br>
 •	*Departamento:* representa os setores responsáveis pelas atividades da empresa. 
-br> <br>
+<br> <br>
 •*	Produto:* representa os produtos comercializados pela organização. 
-br> <br>
+<br> <br>
 •*	Produto_SKU:* representa as variações específicas dos produtos, associadas às características de cor e tamanho.
-br> <br>
+<br> <br>
 •	*Marca:* representa as marcas comercializadas pela organização. 
-br> <br>
+<br> <br>
 •*	Fornecedor:* representa os fornecedores cadastrados no sistema.
-br> <br>
+<br> <br>
 •	*Cor:* representa as cores utilizadas nas variações dos produtos.
-br> <br>
+<br> <br>
 •	*Tamanho:* representa os tamanhos utilizados nas variações dos produtos. 
-br> <br>
+<br> <br>
 •*	Estoque:* representa o controle das quantidades disponíveis das variações dos produtos.
-br> <br>
+<br> <br>
 •*	Venda:* representa as vendas realizadas pela organização.
-br> <br>
+<br> <br>
 
 •	*Item_Venda:* representa cada item que compõe uma venda, incluindo a quantidade, preço unitário, desconto e produto/variação comercializado. 
 •*	Pedido_Online:* representa os pedidos realizados pelo site. 
