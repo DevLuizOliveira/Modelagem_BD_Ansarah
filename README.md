@@ -242,23 +242,23 @@ A entidade
 *Relacionamentos pertinentes*
 <br><br>
 Os relacionamentos identificados no modelo são:<br><br>
-•	Departamento possui Funcionários; 
-•	Marca possui Produtos; 
-•	Produto possui Produto_SKU; 
-•	Cor possui Produto_SKU; 
-•	Tamanho possui Produto_SKU; 
-•	Produto_SKU possui Estoque; 
-•	Cliente está associado às Vendas; 
-•	Funcionário registra Vendas; 
-•	Venda possui Itens_Venda; 
-•	Produto_SKU compõe Itens_Venda; 
-•	Cliente realiza Pedidos_Online; 
-•	Pedido_Online gera a Venda correspondente; 
-•	Tabela_Preco possui registros de Historico_Preco; 
-•	Produto_SKU possui registros de Historico_Preco; 
-•	Pedido_Online possui ocorrências de Troca_Devolucao; 
-•	Fornecedor recebe Pedidos_Reposicao; 
-•	Pedido_Reposicao possui Itens_Pedido_Reposicao; 
+•	Departamento possui Funcionários; <br><br>
+•	Marca possui Produtos; <br><br>
+•	Produto possui Produto_SKU; <br><br>
+•	Cor possui Produto_SKU; <br><br>
+•	Tamanho possui Produto_SKU; <br><br>
+•	Produto_SKU possui Estoque; <br><br>
+•	Cliente está associado às Vendas; <br><br>
+•	Funcionário registra Vendas; <br><br>
+•	Venda possui Itens_Venda; <br><br>
+•	Produto_SKU compõe Itens_Venda; <br><br>
+•	Cliente realiza Pedidos_Online; <br><br>
+•	Pedido_Online gera a Venda correspondente; <br><br>
+•	Tabela_Preco possui registros de Historico_Preco; <br><br>
+•	Produto_SKU possui registros de Historico_Preco; <br><br>
+•	Pedido_Online possui ocorrências de Troca_Devolucao; <br><br>
+•	Fornecedor recebe Pedidos_Reposicao; <br><br>
+•	Pedido_Reposicao possui Itens_Pedido_Reposicao; <br><br>
 •	Produto_SKU compõe Itens_Pedido_Reposicao. <br><br>
 As cardinalidades são representadas no DER conforme as relações identificadas no levantamento.
 
