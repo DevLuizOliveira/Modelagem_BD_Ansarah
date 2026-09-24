@@ -106,7 +106,7 @@ Principais processos mapeados:
 Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Requisitos Não Funcionais (RNF) *. Os Requisitos Funcionais representam as funcionalidades e operações que o sistema deve realizar, enquanto os Requisitos Não Funcionais representam características, restrições e condições relacionadas ao funcionamento do sistema, como segurança, desempenho, disponibilidade e recuperação dos dados.
 
 
-<h1>Requisitos Funcionais</h1>
+<h4>Requisitos Funcionais</h4>
 
 | Código | Requisito |
 |---|---|
