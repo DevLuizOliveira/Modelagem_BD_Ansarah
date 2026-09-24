@@ -107,82 +107,8 @@ Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Re
 
 
 *Requisitos Funcionais*
-Modelagem de Banco de Dados para Gestão de Informações da Ansarah
-Introdução
-Este trabalho apresenta a modelagem conceitual de um sistema de gestão de informações para a Ansarah, organização que atua no comércio de roupas de academia, roupas íntimas e produtos relacionados ao segmento de moda.
-O trabalho tem como objetivo desenvolver um modelo conceitual de dados que represente as principais informações e processos da organização, contribuindo para uma melhor organização e gerenciamento dos dados utilizados em suas atividades. O levantamento de requisitos foi realizado por meio de pesquisa de campo, utilizando um questionário com perguntas direcionadas à organização. As informações foram obtidas por meio de entrevista com Alessandra, uma das proprietárias da Ansarah e responsável pela administração do setor financeiro, sendo utilizadas como base para a compreensão dos processos, informações, dificuldades e regras de funcionamento da organização.
-O projeto tem como delimitação a modelagem conceitual das informações e dos processos levantados junto à organização, não abrangendo, nesta etapa, a implementação do banco de dados ou o desenvolvimento do sistema. O modelo será construído com base nos processos e nas necessidades identificadas durante o levantamento de requisitos.
-Desenvolvimento
-Caracterização da Organização
 
-Nome e natureza da organização: A Ansarah é uma empresa comercial, pertencente ao segmento de moda e vestuário. Sua história começou em 1932, na Rua 25 de Março, em São Paulo, inicialmente com a comercialização de meias. Ao longo dos anos, a empresa expandiu sua atuação para moda íntima, lingerie e outros tipos de vestuário, comercializando atualmente diversos produtos por meio de lojas físicas e loja virtual.
-Contexto e porte: A Ansarah é uma empresa com fins lucrativos, com uma operação consolidada no segmento de moda e vestuário. Possui entre 50 e 100 funcionários, loja física, loja virtual e centro de logística, realizando vendas no varejo e no atacado para todo o país.
-Problemas e necessidades identificados: Os principais problemas identificados estão relacionados à inserção manual das informações no sistema, especialmente no cadastro de produtos, à dificuldade de criação de relatórios personalizados e à recuperação das informações após a perda ou restauração de um backup. Nesses casos, é necessário retornar a um backup anterior e realizar novamente, de forma manual, a inserção das informações que não estavam presentes na versão recuperada, o que pode gerar retrabalho e aumentar o risco de perda ou desatualização dos dados.
-Dessa forma, identifica-se a necessidade de otimizar a inserção e atualização das informações no sistema, facilitar a obtenção de informações para apoio à tomada de decisão e melhorar os mecanismos relacionados à recuperação dos dados.
-Justificativa da escolha: a Ansarah foi escolhida porque o grupo possui acesso à organização por meio de contato com seu responsável. Uma das integrantes do grupo possui vínculo familiar com uma funcionária da empresa, o que possibilitou o contato e a realização da pesquisa de campo. Além disso, a organização possui diversos processos de negócio adequados à aplicação dos conceitos de banco de dados.
-Evidências da organização: Para comprovar a existência da organização e o acesso do grupo para a realização da pesquisa de campo, foram reunidas informações e registros relacionados à Ansarah.
-Como evidências, serão apresentados:
-- Localização: links do Google Maps das lojas da organização
-R. Vinte e Cinco de Março, 537 - Centro Histórico de São Paulo, São Paulo - SP, 01021-000 (https://maps.app.goo.gl/ja89dX2NqaD3WHnK6 )
-R. Maria Marcolina, 254 - Brás, São Paulo - SP, 03011-000 (https://maps.app.goo.gl/SKGrzBL6uDV7w4WL8 )
-
- - Registro fotográfico: fotos da fachada da loja
-
-
-
-
-
-LOJA DA 25 DE MARÇO
-
-
-
-
-
-
-
-LOJA DO BRÁS
-
-- Site oficial: link do site da Ansarah
  
-
-- Registro empresarial: link da consulta de CNPJ da organização
- 
-
-- Comunicação com a organização: áudio e print da conversa realizada. Responsável entrevistada Alessandra, uma das proprietárias da organização e responsável pelo setor financeiro.
-  
-
-- Levantamento de requisitos: Perguntas respondidas pela responsável pela organização.
-Foram anexadas no repositório 
-
-PROCESSOS DE NEGÓCIO
-Principais processos mapeados:
-•	Cadastro e atualização de produtos; 
-•	Cadastro e controle das variações de produtos por cor e tamanho; 
-•	Controle de estoque e inventário; 
-•	Cadastro de clientes; 
-•	Cadastro e relacionamento com fornecedores e marcas; 
-•	Registro de vendas no Ponto de Venda (PDV) e no site; 
-•	Controle de preços e promoções; 
-•	Processamento e acompanhamento de pedidos online; 
-•	Trocas, devoluções, cancelamentos e estornos; 
-•	Registro e acompanhamento de pedidos de reposição; 
-•	Geração de relatórios; 
-•	Controle de usuários e permissões de acesso.
- 
-DESCRIÇÃO DOS PRINCIPAIS PROCESSOS
-Cadastro de produtos: os produtos são cadastrados manualmente no sistema de gestão empresarial utilizando informações fornecidas pelas fábricas, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo, informações fiscais e demais características do produto.
-Controle de estoque: as quantidades dos produtos são registradas e acompanhadas no sistema. A organização utiliza o sistema para verificar disponibilidade, identificar produtos com estoque baixo ou sem estoque e acompanhar produtos com baixo giro.
-Cadastro de clientes: os dados dos clientes são cadastrados no sistema, incluindo informações de identificação e contato. No comércio eletrônico, essas informações devem receber tratamento adequado em relação à privacidade.
-Registro de vendas: as vendas realizadas no Ponto de Venda e no site são registradas no sistema. Cada venda possui informações como data, canal, desconto, forma de pagamento, funcionário responsável e seus respectivos itens.
-Processamento de pedidos online: os pedidos realizados pelo site passam por etapas de aprovação do pagamento, separação, conferência/bipagem, faturamento, envio, rastreamento e entrega. Também podem ocorrer cancelamentos e reembolsos.
-Controle de preços: a organização utiliza diferentes preços conforme o canal de venda e o tipo de cliente. Alterações de preços e descontos dependem de autorização da diretoria.
-Trocas e devoluções: as solicitações são registradas e o produto devolvido passa por conferência antes da conclusão da operação. Quando necessário, é realizado o estorno.
-Reposição de produtos: são registrados pedidos de reposição junto aos fornecedores, contendo os produtos/variações solicitados, suas quantidades, preços e informações relacionadas à entrega.
-
-Requisitos do Sistema
-Os requisitos do sistema foram organizados em Requisitos Funcionais (RF) e Requisitos Não Funcionais (RNF). Os Requisitos Funcionais representam as funcionalidades e operações que o sistema deve realizar, enquanto os Requisitos Não Funcionais representam características, restrições e condições relacionadas ao funcionamento do sistema, como segurança, desempenho, disponibilidade e recuperação dos dados.
-
-Requisitos Funcionais
 
 
 
