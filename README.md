@@ -1,0 +1,348 @@
+# Modelagem de Banco de Dados para Gestão de Informações da Ansarah
+Projeto acadêmico de modelagem de Banco de Dados da empresa ANSARAH - UNICID
+
+#Integrantes
+- **Ana Beatriz Mendes Gonçalves**
+- **Luiz Gustavo Santos de Oliveira**
+- **Samantha Paula dos Santos Silva**
+
+## 1. Introdução
+
+Este trabalho apresenta a modelagem conceitual de um sistema de gestão de informações para a Ansarah, organização que atua no comércio de roupas de academia, roupas íntimas e produtos relacionados ao segmento de moda.
+</br></br>
+O trabalho tem como objetivo desenvolver um modelo conceitual de dados que represente as principais informações e processos da organização, contribuindo para uma melhor organização e gerenciamento dos dados utilizados em suas atividades. O levantamento de requisitos foi realizado por meio de pesquisa de campo, utilizando um questionário com perguntas direcionadas à organização. As informações foram obtidas por meio de entrevista com Alessandra, uma das proprietárias da Ansarah e responsável pela administração do setor financeiro, sendo utilizadas como base para a compreensão dos processos, informações, dificuldades e regras de funcionamento da organização.
+</br></br>
+O projeto tem como delimitação a modelagem conceitual das informações e dos processos levantados junto à organização, não abrangendo, nesta etapa, a implementação do banco de dados ou o desenvolvimento do sistema. O modelo será construído com base nos processos e nas necessidades identificadas durante o levantamento de requisitos.
+
+
+---
+
+## 2. Caracterização da Organização
+
+**Nome e natureza da organização:** A Ansarah é uma empresa comercial, pertencente ao segmento de moda e vestuário. Sua história começou em 1932, na Rua 25 de Março, em São Paulo, inicialmente com a comercialização de meias. Ao longo dos anos, a empresa expandiu sua atuação para moda íntima, lingerie e outros tipos de vestuário, comercializando atualmente diversos produtos por meio de lojas físicas e loja virtual. 
+</br></br>
+**Contexto e porte:** A Ansarah é uma empresa com fins lucrativos, com uma operação consolidada no segmento de moda e vestuário. Possui entre 50 e 100 funcionários, loja física, loja virtual e centro de logística, realizando vendas no varejo e no atacado para todo o país.
+</br></br>
+**Problemas e necessidades identificados:** Os principais problemas identificados estão relacionados à inserção manual das informações no sistema, especialmente no cadastro de produtos, à dificuldade de criação de relatórios personalizados e à recuperação das informações após a perda ou restauração de um backup. Nesses casos, é necessário retornar a um backup anterior e realizar novamente, de forma manual, a inserção das informações que não estavam presentes na versão recuperada, o que pode gerar retrabalho e aumentar o risco de perda ou desatualização dos dados. Dessa forma, identifica-se a necessidade de otimizar a inserção e atualização das informações no sistema, facilitar a obtenção de informações para apoio à tomada de decisão e melhorar os mecanismos relacionados à recuperação dos dados. 
+</br></br>
+**Justificativa da escolha:** a Ansarah foi escolhida porque o grupo possui acesso à organização por meio de contato com seu responsável. Uma das integrantes do grupo possui vínculo familiar com uma funcionária da empresa, o que possibilitou o contato e a realização da pesquisa de campo. Além disso, a organização possui diversos processos de negócio adequados à aplicação dos conceitos de banco de dados.
+</br></br>
+**Evidências da organização:** Para comprovar a existência da organização e o acesso do grupo para a realização da pesquisa de campo, foram reunidas informações e registros relacionados à Ansarah. Como evidências, serão apresentados: 
+
+---
+
+## 3. Evidências da Pesquisa
+<br>
+Para comprovar a existência da organização e o acesso do grupo para a realização da pesquisa de campo, foram reunidas informações e registros relacionados à Ansarah.
+
+### 3.1 Fotos das lojas
+
+- **Loja da 25 de Março:** foto anexada no repositório.
+- **Loja do Brás:** foto anexada no repositório.
+
+### 3.2 Localização das lojas
+
+**Loja da 25 de Março:**  
+https://maps.app.goo.gl/ja89dX2NqaD3WHnK6
+
+**Loja do Brás:**  
+https://maps.app.goo.gl/SKGrzBL6uDV7w4WL8
+
+### 3.3 Site oficial
+
+https://www.ansarah.com.br/
+
+### 3.4 Consulta de CNPJ
+
+> **https://cnpj.biz/61419610000119**
+
+### 3.5 Comunicação com a organização
+
+Os registros da comunicação com Alessandra (uma das proprietárias da organização e responsável pelo setor financeiro) incluindo **áudio, prints e questionário**, estão **anexados no repositório**.
+
+---
+
+## 4. Principais Processos de Negócio
+
+Principais processos mapeados:
+ <br>
+•	Cadastro e atualização de produtos;  <br>
+•	Cadastro e controle das variações de produtos por cor e tamanho; <br>
+•	Controle de estoque e inventário;  <br>
+•	Cadastro de clientes;  <br>
+•	Cadastro e relacionamento com fornecedores e marcas; 
+•	Registro de vendas no Ponto de Venda (PDV) e no site;  <br>
+•	Controle de preços e promoções;  <br>
+•	Processamento e acompanhamento de pedidos online;  <br>
+•	Trocas, devoluções, cancelamentos e estornos;  <br>
+•	Registro e acompanhamento de pedidos de reposição; <br>
+•	Geração de relatórios; <br> 
+•	Controle de usuários e permissões de acesso. <br>
+<br><br>
+
+### 4.1 DESCRIÇÃO DOS PRINCIPAIS PROCESSOS
+
+*Cadastro de produtos:* os produtos são cadastrados manualmente no sistema de gestão empresarial utilizando informações fornecidas pelas fábricas, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo, informações fiscais e demais características do produto.
+<br><br>
+*Controle de estoque:* as quantidades dos produtos são registradas e acompanhadas no sistema. A organização utiliza o sistema para verificar disponibilidade, identificar produtos com estoque baixo ou sem estoque e acompanhar produtos com baixo giro.
+<br><br>
+*Cadastro de clientes:* os dados dos clientes são cadastrados no sistema, incluindo informações de identificação e contato. No comércio eletrônico, essas informações devem receber tratamento adequado em relação à privacidade.
+<br><br>
+*Registro de vendas:* as vendas realizadas no Ponto de Venda e no site são registradas no sistema. Cada venda possui informações como data, canal, desconto, forma de pagamento, funcionário responsável e seus respectivos itens.
+<br><br>
+*Processamento de pedidos online:* os pedidos realizados pelo site passam por etapas de aprovação do pagamento, separação, conferência/bipagem, faturamento, envio, rastreamento e entrega. Também podem ocorrer cancelamentos e reembolsos.
+<br><br>
+*Controle de preços:* a organização utiliza diferentes preços conforme o canal de venda e o tipo de cliente. Alterações de preços e descontos dependem de autorização da diretoria.
+<br><br>
+*Trocas e devoluções:* as solicitações são registradas e o produto devolvido passa por conferência antes da conclusão da operação. Quando necessário, é realizado o estorno.
+<br><br>
+*Reposição de produtos:* são registrados pedidos de reposição junto aos fornecedores, contendo os produtos/variações solicitados, suas quantidades, preços e informações relacionadas à entrega.
+
+<br><br>
+
+---
+
+## 5. Requisitos do Sistema
+Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Requisitos Não Funcionais (RNF) *. Os Requisitos Funcionais representam as funcionalidades e operações que o sistema deve realizar, enquanto os Requisitos Não Funcionais representam características, restrições e condições relacionadas ao funcionamento do sistema, como segurança, desempenho, disponibilidade e recuperação dos dados.
+
+
+<h4>Requisitos Funcionais</h4>
+
+| Código | Requisito |
+|---|---|
+| RF01 | O sistema deve permitir cadastrar produtos informando código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e demais informações de cadastro utilizadas pela organização. |
+| RF02 | O sistema deve permitir atualizar os dados cadastrais dos produtos, incluindo descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. |
+| RF03 | O sistema deve permitir cadastrar marcas e associá-las aos respectivos produtos. |
+| RF04 | O sistema deve permitir cadastrar fornecedores, armazenando CNPJ, razão social e nomedo fornecedor. |
+| RF05 | O sistema deve permitir registrar pedidos de reposição vinculados a fornecedores e contendo os produtos/variações, quantidades e preços solicitados. |
+| RF06 | O sistema deve permitir cadastrar clientes com nome, documentos, endereço, telefone e e-mail. |
+| RF07 | O sistema deve permitir consultar o histórico de compras de um cliente a partir das vendas registradas. |
+| RF08 | O sistema deve permitir registrar vendas contendo data, canal de venda, forma de pagamento, desconto, funcionário responsável e itens comercializados. |
+| RF09 | O sistema deve permitir registrar, para cada item de venda, a quantidade, o preço unitário, o desconto e a variação do produto comercializada. |
+| RF10 | O sistema deve permitir controlar o estoque das variações dos produtos e registrar as respectivas quantidades e atualizações de inventário. |
+| RF11 | O sistema deve permitir cadastrar e relacionar as variações dos produtos às respectivas cores e tamanhos. |
+| RF12 | O sistema deve permitir cadastrar tabelas de preços conforme o canal de venda e o tipo de cliente. |
+| RF13 | O sistema deve permitir registrar o histórico dos preços aplicados às variações dos produtos, incluindo o preço e o período de vigência. |
+| RF14 | O sistema deve permitir registrar pedidos realizados pelo site, incluindo data, status do pedido, status do pagamento, rastreamento, envio e entrega. |
+| RF15 | O sistema deve permitir associar um pedido online à venda correspondente e aos respectivos itens comercializados. |
+| RF16 | O sistema deve permitir acompanhar as etapas do pedido online, incluindo pagamento, separação, conferência, faturamento, envio, rastreamento e entrega. |
+| RF17 | O sistema deve permitir registrar ocorrências de troca, devolução e cancelamento relacionadas aos pedidos online, incluindo motivo, data, status e valor de estorno quando aplicável. |
+| RF18 | O sistema deve permitir gerar relatórios de faturamento, estoque, produtos, marcas, clientes, categorias e comparativos de vendas. |
+| RF19 | O sistema deve permitir controlar usuários e suas permissões de acesso de acordo com o departamento e a função exercida. |
+| RF20 | O sistema deve permitir realizar backups das informações armazenadas e recuperar os dados a partir de uma cópia de segurança quando necessário. |
+
+ 
+
+
+
+*Requisitos Não Funcionais*
+
+| Requisito | Descrição |
+|---|---|
+| RNF01 — Segurança | O sistema deve proteger os dados armazenados contra acessos não autorizados. |
+| RNF02 — Privacidade | Os dados pessoais dos clientes devem ser tratados de acordo com a LGPD. (Lei Geral de Proteção de Dados Pessoais) |
+| RNF03 — Controle de acesso | O sistema deve permitir restringir o acesso às informações conforme o departamento e as permissões atribuídas a cada funcionário. |
+| RNF04 — Backup | O sistema deve realizar cópias de segurança periódicas dos dados armazenados. |
+| RNF05 — Recuperação de dados | O sistema deve permitir recuperar informações a partir de backups em caso de perda ou inconsistência dos dados. |
+| RNF06 — Integridade dos dados | O sistema deve utilizar mecanismos que reduzam a ocorrência de registros duplicados, inconsistentes ou desatualizados. |
+| RNF07 — Usabilidade | O sistema deve facilitar o preenchimento, consulta e atualização das informações, principalmente durante o cadastro manual de produtos. |
+| RNF08 — Compatibilidade | O sistema deve ser acessível por computadores e notebooks, dispositivos utilizados atualmente pela organização. |
+| RNF09 — Desempenho | O sistema deve apresentar tempo de resposta adequado para consultas, registros e geração dos relatórios utilizados na rotina da organização. |
+
+---
+
+## 7. Regras de Negócio
+
+
+As regras de negócio foram definidas a partir das informações obtidas durante o levantamento realizado com a representante da Ansarah.
+
+*Regras operacionais*
+<br><br>
+| Código | Regra operacional | Descrição |
+|---|---|---|
+| RN01 | Cadastro de produtos | O cadastro de cada produto deve ser realizado no sistema de gestão empresarial utilizando as informações fornecidas pelas fábricas, incluindo código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. |
+| RN02 | Variações de produtos | As variações dos produtos devem ser controladas de acordo com as grades de cor e tamanho utilizadas pela organização. |
+| RN03 | Controle de estoque | As quantidades disponíveis das variações dos produtos devem ser controladas pelo sistema de gestão empresarial, considerando a integração entre a loja física e o comércio eletrônico. |
+| RN04 | Registro de vendas | Toda venda realizada pela organização deve ser registrada no sistema, contendo os dados da venda e os respectivos itens comercializados. |
+| RN05 | Itens da venda | Cada item de venda deve identificar a variação do produto comercializada, sua quantidade, preço unitário e desconto aplicado. |
+| RN06 | Pedidos online | Os pedidos realizados pelo site devem possuir informações referentes ao pagamento, separação, conferência, faturamento, envio, rastreamento e entrega. |
+| RN07 | Trocas e devoluções | Antes da conclusão de uma troca ou devolução, o produto retornado deve passar por conferência. |
+| RN08 | Cancelamentos | O cancelamento de um pedido pode ocorrer antes do envio, seguindo o processo definido pela organização para o estorno do pagamento. |
+| RN09 | Histórico de preços | As alterações de preços devem ser registradas de forma que seja possível identificar o valor aplicado à respectiva variação do produto e seu período de vigência. |
+
+*Regras operacionais*
+<br><br>
+| Código | Regra operacional | Descrição |
+|---|---|---|
+| RN10 | Prazos de troca | Os prazos e condições para trocas devem seguir as disposições aplicáveis do Código de Defesa do Consumidor. |
+| RN11 | Condições B2C e B2B | As condições comerciais para clientes B2C e B2B podem apresentar diferentes prazos de pagamento, descontos e demais condições comerciais. |
+| RN12 | Alteração de preços | A alteração de preços e a concessão de descontos dependem de autorização da diretoria. |
+| RN13 | Permissões de acesso | O acesso às informações do sistema deve respeitar as permissões atribuídas aos funcionários conforme seus departamentos e funções. |
+| RN14 | Proteção dos dados pessoais | As informações pessoais dos clientes devem ser tratadas de acordo com as regras estabelecidas pela LGPD. |
+| RN15 | Reposição de produtos | Os pedidos de reposição devem ser associados a um fornecedor e devem informar as variações dos produtos, quantidades e preços solicitados. |
+---
+
+## 8. Modelo Conceitual (Entidade-Relacionamento-Atributos)
+
+Entidades reconhecidas
+<br><br>
+A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais: 
+<br> <br>
+•**Cliente:** representa os clientes cadastrados pela organização.
+<br> <br>
+•**Funcionário:**. representa os funcionários envolvidos nos processos da organização.
+<br> <br>
+•	**Departamento:** representa os setores responsáveis pelas atividades da empresa. 
+<br> <br>
+•**Produto:** representa os produtos comercializados pela organização. 
+<br> <br>
+•**Produto_SKU:** representa as variações específicas dos produtos, associadas às características de cor e tamanho.
+<br> <br>
+•	**Marca:** representa as marcas comercializadas pela organização. 
+<br> <br>
+•**Fornecedor:** representa os fornecedores cadastrados no sistema.
+<br> <br>
+•	**Cor:** representa as cores utilizadas nas variações dos produtos.
+<br> <br>
+•	**Tamanho:** representa os tamanhos utilizados nas variações dos produtos. 
+<br> <br>
+•**Estoque:** representa o controle das quantidades disponíveis das variações dos produtos.
+<br> <br>
+•**Venda:** representa as vendas realizadas pela organização.
+<br> <br>
+
+•	**Item_Venda:** representa cada item que compõe uma venda, incluindo a quantidade, preço unitário, desconto e produto/variação comercializado.
+<br> <br>
+•**Pedido_Online:** representa os pedidos realizados pelo site. 
+<br> <br>
+•**Tabela_Preco:** representa as diferentes tabelas de preços utilizadas pela organização. 
+<br> <br>
+•	**Historico_Preco:** registra os preços aplicados às variações dos produtos ao longo do tempo.
+<br> <br>
+•	**Troca_Devolucao:** representa ocorrências de troca, devolução ou cancelamento relacionadas aos pedidos online. 
+<br> <br>
+•**Pedido_Reposicao:** representa os pedidos realizados aos fornecedores para reposição de produtos. 
+<br> <br>
+•	**Item_Pedido_Reposicao:** representa cada produto/variação que faz parte de um pedido de reposição.
+<br><br>
+**<h4>Atributos e classificações:</h4>**
+Os atributos foram definidos a partir das informações obtidas durante a entrevista e representam os dados necessários para caracterizar as entidades e registrar os processos da organização.
+A entidade 
+<br><br>
+**Produto:** concentra as informações gerais de cadastro, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais.
+<br><br>
+**Produto_SKU:** representa uma variação específica do produto, permitindo associar características como cor e tamanho sem repetir os dados gerais do produto.
+<br><br>
+**Venda:** armazena as informações gerais de cada venda, enquanto Item_Venda registra os produtos/variações comercializados, incluindo quantidade, preço unitário e desconto.
+<br><br>
+**Pedidos_Online:** possue informações próprias do processo de venda pelo site, como status do pedido, status do pagamento, rastreamento, envio e entrega. A venda correspondente utiliza a entidade Item_Venda para registrar os produtos comercializados.
+<br><br>
+**Historico_Preco:** armazena o preço aplicado à variação do produto, sua tabela de preço e o período de vigência, permitindo manter o histórico das alterações de preço.
+<br><br>
+**Relacionamentos pertinentes**
+<br><br>
+Os relacionamentos identificados no modelo são:<br><br>
+•	Departamento possui Funcionários; <br><br>
+•	Marca possui Produtos; <br><br>
+•	Produto possui Produto_SKU; <br><br>
+•	Cor possui Produto_SKU; <br><br>
+•	Tamanho possui Produto_SKU; <br><br>
+•	Produto_SKU possui Estoque; <br><br>
+•	Cliente está associado às Vendas; <br><br>
+•	Funcionário registra Vendas; <br><br>
+•	Venda possui Itens_Venda; <br><br>
+•	Produto_SKU compõe Itens_Venda; <br><br>
+•	Cliente realiza Pedidos_Online; <br><br>
+•	Pedido_Online gera a Venda correspondente; <br><br>
+•	Tabela_Preco possui registros de Historico_Preco; <br><br>
+•	Produto_SKU possui registros de Historico_Preco; <br><br>
+•	Pedido_Online possui ocorrências de Troca_Devolucao; <br><br>
+•	Fornecedor recebe Pedidos_Reposicao; <br><br>
+•	Pedido_Reposicao possui Itens_Pedido_Reposicao; <br><br>
+•	Produto_SKU compõe Itens_Pedido_Reposicao. <br><br>
+As cardinalidades são representadas no DER conforme as relações identificadas no levantamento.
+
+
+
+
+### 9. DER Diagrama Entidade-Relacionamento 
+
+O **Diagrama Entidade-Relacionamento (DER)** está **anexado no repositório**.
+
+> **Imagem do DER: anexada no repositório.**
+
+---
+
+## 10. Dicionário de Dados
+
+O **Dicionário de Dados** está **anexado no repositório**.
+
+Ele apresenta as entidades, atributos, chaves primárias (PK), chaves estrangeiras (FK) e demais informações definidas para o modelo.
+
+> **Arquivo do Dicionário de Dados: anexado no repositório.**
+
+---
+
+## 11. Justificativa Técnica do Modelo
+<br><br>
+A modelagem conceitual foi desenvolvida com o objetivo de organizar as informações da Ansarah de forma estruturada, representando as principais entidades envolvidas nos processos de cadastro, vendas, estoque, preços, pedidos online, reposição e atendimento de ocorrências.<br><br>
+A entidade Produto concentra as informações gerais dos produtos comercializados pela organização, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. O preço não foi mantido diretamente nessa entidade, pois a organização trabalha com diferentes tabelas de preços e realiza alterações de valores ao longo do tempo.<br><br>
+A entidade Produto_SKU foi utilizada para representar as variações específicas dos produtos. Essa estrutura permite associar uma determinada variação às características de Cor e Tamanho, evitando a repetição das informações gerais do produto.
+As entidades Cor e Tamanho foram separadas para permitir que essas características sejam reutilizadas em diferentes variações de produtos.<br><br>
+A entidade Estoque foi separada para representar o controle das quantidades disponíveis das variações dos produtos. Dessa forma, o estoque pode ser relacionado ao respectivo Produto_SKU.<br><br>
+A entidade Venda representa as informações gerais das vendas realizadas pela organização. A entidade Item_Venda representa os produtos que compõem cada venda, permitindo registrar a quantidade, o preço unitário e o desconto aplicado a cada item.<br><br>
+A entidade Pedido_Online representa as informações específicas dos pedidos realizados pelo site, como status, pagamento, rastreamento, envio e entrega. Como a organização utiliza os mesmos registros de itens para representar os produtos comercializados, o pedido online é associado à venda correspondente, que possui os respectivos Itens_Venda. Dessa forma, não é necessária uma entidade separada chamada Item_Pedido.<br><br>
+A entidade Tabela_Preco foi criada para representar as diferentes tabelas de preços utilizadas pela organização, considerando características como canal de venda e tipo de cliente. A entidade Historico_Preco registra os valores aplicados aos produtos ao longo do tempo, permitindo identificar o preço utilizado em determinado período.
+As entidades Fornecedor, Pedido_Reposicao e Item_Pedido_Reposicao representam o processo de reposição de produtos. O Pedido_Reposicao registra a solicitação realizada junto ao fornecedor, enquanto o Item_Pedido_Reposicao identifica cada variação de produto solicitada, sua quantidade e seu preço.<br><br>
+A entidade Troca_Devolucao registra ocorrências relacionadas aos pedidos online, como trocas, devoluções e cancelamentos, permitindo armazenar informações como motivo, data, status e valor de estorno quando aplicável.<br><br>
+A entidade Funcionario foi relacionada à entidade Departamento, permitindo representar a distribuição dos funcionários pelos diferentes setores da organização. A entidade Cliente permite relacionar os clientes às vendas e aos pedidos online realizados.<br><br>
+O atributo valor_total_venda não foi incluído na entidade Venda, conforme orientação do professor, pois o valor pode ser obtido a partir dos itens da venda, considerando suas quantidades, preços unitários e descontos.<br><br>
+As chaves primárias (PK) identificam exclusivamente os registros de cada entidade. As chaves estrangeiras (FK), presentes no dicionário como referência para uma futura implementação relacional, representam as ligações entre as entidades. No modelo conceitual, essas ligações são representadas principalmente por meio dos relacionamentos e suas respectivas cardinalidades.<br><br>
+A estrutura proposta busca reduzir a duplicidade de informações, organizar os dados de acordo com os processos identificados na organização e permitir futuras expansões do sistema.
+<br><br>
+
+---
+
+## 12. Uso de Inteligência Artificial
+| Item | Registro |
+|---|---|
+| Ferramenta e etapa | ChatGPT — elaboração do questionário para levantamento de requisitos e estruturação/ organização do README |
+| Motivação | Auxiliar o grupo na elaboração das perguntas para a entrevista, e na organização das informações obtidas |
+| Prompt(s) utilizados | Levantamento de requisitos: “Estamos realizando um trabalho de Banco de Dados no qual precisamos entrevistar uma organização de pequeno porte e levantar requisitos para desenvolver um modelo conceitual. A organização é uma loja de roupas. Crie perguntas que nos ajudem a entender os processos, dados utilizados, estoque, vendas, clientes, fornecedores, funcionários, relatórios, segurança e dificuldades do sistema. <br><br> Organização do trabalho: “Com base nas informações obtidas na entrevista com a Ansarah, explique como o conteúdo do trabalho deve ser organizado de acordo com o roteiro do professor. Explique também quais informações devem ser apresentadas no, Processos de Negócio, Requisitos Funcionais, Requisitos Não Funcionais, Regras de Negócio e como deverá ser feito o Dicionário de Dados." |
+| Resposta recebida | A IA sugeriu perguntas sobre produtos, estoque, vendas, clientes, fornecedores, pedidos, relatórios, segurança e processos internos. Também auxiliou na organização das informações nas seções do trabalho e sugeriu entidades, atributos, relacionamentos e cardinalidades preliminares para o MER/DER. |
+| Fontes consultadas e verificadas | As informações sobre a organização foram obtidas por meio da entrevista com a representante da Ansarah e complementadas por pesquisas em fontes públicas, como consulta de CNPJ e perfil da empresa no LinkedIn. O conteúdo também foi confrontado com o roteiro disponibilizado pelo professor. As sugestões da IA foram utilizadas apenas como apoio e não como fonte de informações sobre a empresa. |
+| Trechos rejeitados ou corrigidos | Algumas perguntas, informações, regras e trechos sugeridos pela IA foram retirados, reformulados ou corrigidos por não serem relevantes ou por não terem sido confirmados pela organização. |
+| Justificativa da escolha final | A versão final será definida pelo grupo com base na pesquisa de campo e nas orientações da disciplina. |
+| Reflexão crítica | A IA foi utilizada como ferramenta de apoio, organização e escrita, mas suas sugestões não foram consideradas como informações definitivas sobre a empresa. As respostas da entrevista e as decisões do grupo foram utilizadas para validar e adaptar o conteúdo. |
+
+
+
+
+---
+
+## 13. Conclusão
+A pesquisa realizada com a Ansarah, por meio de perguntas direcionadas à organização, possibilitou compreender os principais processos relacionados ao gerenciamento de suas informações. Foram identificadas atividades envolvendo produtos, variações de produtos, estoque, clientes, funcionários, departamentos, vendas, fornecedores, marcas, preços, pedidos online, pedidos de reposição, trocas, devoluções, relatórios e controle de acesso.
+A principal dificuldade identificada está relacionada à inserção manual das informações, especialmente no cadastro de produtos, além da customização de relatórios e da necessidade de correções ou recuperação de dados em determinadas situações.
+Com base nessas informações, foi elaborada uma proposta de modelo conceitual que organiza as principais entidades, atributos e relacionamentos identificados durante o levantamento. O modelo considera também as variações dos produtos por meio da entidade Produto_SKU, além dos processos relacionados a vendas, pedidos online, estoque, controle de preços e reposição de produtos.
+O modelo conceitual será validado e refinado conforme novas informações sejam obtidas junto à organização. Após sua validação, ele servirá como base para as próximas etapas do projeto, incluindo a elaboração do modelo lógico, a implementação em SQL e o desenvolvimento de consultas ao banco de dados.
+
+
+
+---
+
+## 14. Referências
+
+- **ANSARAH.** Informações institucionais e comerciais.  
+  https://www.ansarah.com.br/
+
+- **ANSARAH.** Entrevista e questionário com representante da organização. 2026.
+
+- **Google Maps.** Localização das lojas da Ansarah.  
+  25 de Março: https://maps.app.goo.gl/ja89dX2NqaD3WHnK6  
+  Brás: https://maps.app.goo.gl/SKGrzBL6uDV7w4WL8
+
+- **CNPJ.BIZ.** Consulta de registro da organização.  
+  > **(https://cnpj.biz/61419610000119)**
+
+---
+
