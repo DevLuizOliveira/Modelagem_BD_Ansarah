@@ -188,66 +188,77 @@ Entidades reconhecidas
 <br><br>
 A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais: 
 <br> <br>
-•*	Cliente:* representa os clientes cadastrados pela organização.
+•**Cliente:** representa os clientes cadastrados pela organização.
 <br> <br>
-•*	Funcionário:*. representa os funcionários envolvidos nos processos da organização.
+•**Funcionário:**. representa os funcionários envolvidos nos processos da organização.
 <br> <br>
-•	*Departamento:* representa os setores responsáveis pelas atividades da empresa. 
+•	**Departamento:** representa os setores responsáveis pelas atividades da empresa. 
 <br> <br>
-•*	Produto:* representa os produtos comercializados pela organização. 
+•**Produto:** representa os produtos comercializados pela organização. 
 <br> <br>
-•*	Produto_SKU:* representa as variações específicas dos produtos, associadas às características de cor e tamanho.
+•**Produto_SKU:** representa as variações específicas dos produtos, associadas às características de cor e tamanho.
 <br> <br>
-•	*Marca:* representa as marcas comercializadas pela organização. 
+•	**Marca:** representa as marcas comercializadas pela organização. 
 <br> <br>
-•*	Fornecedor:* representa os fornecedores cadastrados no sistema.
+•**Fornecedor:** representa os fornecedores cadastrados no sistema.
 <br> <br>
-•	*Cor:* representa as cores utilizadas nas variações dos produtos.
+•	**Cor:** representa as cores utilizadas nas variações dos produtos.
 <br> <br>
-•	*Tamanho:* representa os tamanhos utilizados nas variações dos produtos. 
+•	**Tamanho:** representa os tamanhos utilizados nas variações dos produtos. 
 <br> <br>
-•*	Estoque:* representa o controle das quantidades disponíveis das variações dos produtos.
+•**Estoque:** representa o controle das quantidades disponíveis das variações dos produtos.
 <br> <br>
-•*	Venda:* representa as vendas realizadas pela organização.
+•**Venda:** representa as vendas realizadas pela organização.
 <br> <br>
 
-•	*Item_Venda:* representa cada item que compõe uma venda, incluindo a quantidade, preço unitário, desconto e produto/variação comercializado. 
-•*	Pedido_Online:* representa os pedidos realizados pelo site. 
-•*	Tabela_Preco:* representa as diferentes tabelas de preços utilizadas pela organização. 
-•	*Historico_Preco:* registra os preços aplicados às variações dos produtos ao longo do tempo. 
-•	*Troca_Devolucao:* representa ocorrências de troca, devolução ou cancelamento relacionadas aos pedidos online. 
-•*	Pedido_Reposicao:* representa os pedidos realizados aos fornecedores para reposição de produtos. 
-•	*Item_Pedido_Reposicao:* representa cada produto/variação que faz parte de um pedido de reposição.
+•	**Item_Venda:** representa cada item que compõe uma venda, incluindo a quantidade, preço unitário, desconto e produto/variação comercializado.
+<br> <br>
+•**Pedido_Online:** representa os pedidos realizados pelo site. 
+<br> <br>
+•**Tabela_Preco:** representa as diferentes tabelas de preços utilizadas pela organização. 
+<br> <br>
+•	**Historico_Preco:** registra os preços aplicados às variações dos produtos ao longo do tempo.
+<br> <br>
+•	**Troca_Devolucao:** representa ocorrências de troca, devolução ou cancelamento relacionadas aos pedidos online. 
+<br> <br>
+•**Pedido_Reposicao:** representa os pedidos realizados aos fornecedores para reposição de produtos. 
+<br> <br>
+•	**Item_Pedido_Reposicao:** representa cada produto/variação que faz parte de um pedido de reposição.
 <br><br>
-*Atributos e classificações*
-<br><br>
+**<h4>Atributos e classificações:</h4>**
 Os atributos foram definidos a partir das informações obtidas durante a entrevista e representam os dados necessários para caracterizar as entidades e registrar os processos da organização.
-A entidade *Produto* concentra as informações gerais de cadastro, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais.
-A entidade *Produto_SKU* representa uma variação específica do produto, permitindo associar características como cor e tamanho sem repetir os dados gerais do produto.
-A entidade *Venda* armazena as informações gerais de cada venda, enquanto Item_Venda registra os produtos/variações comercializados, incluindo quantidade, preço unitário e desconto.
-Os *Pedidos_Online* possuem informações próprias do processo de venda pelo site, como status do pedido, status do pagamento, rastreamento, envio e entrega. A venda correspondente utiliza a entidade Item_Venda para registrar os produtos comercializados.
-A entidade *Historico_Preco* armazena o preço aplicado à variação do produto, sua tabela de preço e o período de vigência, permitindo manter o histórico das alterações de preço.
+A entidade 
 <br><br>
-*Relacionamentos pertinentes*
+**Produto:** concentra as informações gerais de cadastro, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais.
+<br><br>
+**Produto_SKU:** representa uma variação específica do produto, permitindo associar características como cor e tamanho sem repetir os dados gerais do produto.
+<br><br>
+**Venda:** armazena as informações gerais de cada venda, enquanto Item_Venda registra os produtos/variações comercializados, incluindo quantidade, preço unitário e desconto.
+<br><br>
+**Pedidos_Online:** possue informações próprias do processo de venda pelo site, como status do pedido, status do pagamento, rastreamento, envio e entrega. A venda correspondente utiliza a entidade Item_Venda para registrar os produtos comercializados.
+<br><br>
+**Historico_Preco:** armazena o preço aplicado à variação do produto, sua tabela de preço e o período de vigência, permitindo manter o histórico das alterações de preço.
+<br><br>
+**Relacionamentos pertinentes**
 <br><br>
 Os relacionamentos identificados no modelo são:<br><br>
-•	Departamento possui Funcionários; 
-•	Marca possui Produtos; 
-•	Produto possui Produto_SKU; 
-•	Cor possui Produto_SKU; 
-•	Tamanho possui Produto_SKU; 
-•	Produto_SKU possui Estoque; 
-•	Cliente está associado às Vendas; 
-•	Funcionário registra Vendas; 
-•	Venda possui Itens_Venda; 
-•	Produto_SKU compõe Itens_Venda; 
-•	Cliente realiza Pedidos_Online; 
-•	Pedido_Online gera a Venda correspondente; 
-•	Tabela_Preco possui registros de Historico_Preco; 
-•	Produto_SKU possui registros de Historico_Preco; 
-•	Pedido_Online possui ocorrências de Troca_Devolucao; 
-•	Fornecedor recebe Pedidos_Reposicao; 
-•	Pedido_Reposicao possui Itens_Pedido_Reposicao; 
+•	Departamento possui Funcionários; <br><br>
+•	Marca possui Produtos; <br><br>
+•	Produto possui Produto_SKU; <br><br>
+•	Cor possui Produto_SKU; <br><br>
+•	Tamanho possui Produto_SKU; <br><br>
+•	Produto_SKU possui Estoque; <br><br>
+•	Cliente está associado às Vendas; <br><br>
+•	Funcionário registra Vendas; <br><br>
+•	Venda possui Itens_Venda; <br><br>
+•	Produto_SKU compõe Itens_Venda; <br><br>
+•	Cliente realiza Pedidos_Online; <br><br>
+•	Pedido_Online gera a Venda correspondente; <br><br>
+•	Tabela_Preco possui registros de Historico_Preco; <br><br>
+•	Produto_SKU possui registros de Historico_Preco; <br><br>
+•	Pedido_Online possui ocorrências de Troca_Devolucao; <br><br>
+•	Fornecedor recebe Pedidos_Reposicao; <br><br>
+•	Pedido_Reposicao possui Itens_Pedido_Reposicao; <br><br>
 •	Produto_SKU compõe Itens_Pedido_Reposicao. <br><br>
 As cardinalidades são representadas no DER conforme as relações identificadas no levantamento.
 
