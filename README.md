@@ -211,22 +211,33 @@ A partir do levantamento realizado com a organização, foram identificadas as s
 •*	Venda:* representa as vendas realizadas pela organização.
 <br> <br>
 
-•	*Item_Venda:* representa cada item que compõe uma venda, incluindo a quantidade, preço unitário, desconto e produto/variação comercializado. 
+•	*Item_Venda:* representa cada item que compõe uma venda, incluindo a quantidade, preço unitário, desconto e produto/variação comercializado.
+<br> <br>
 •*	Pedido_Online:* representa os pedidos realizados pelo site. 
+<br> <br>
 •*	Tabela_Preco:* representa as diferentes tabelas de preços utilizadas pela organização. 
-•	*Historico_Preco:* registra os preços aplicados às variações dos produtos ao longo do tempo. 
+<br> <br>
+•	*Historico_Preco:* registra os preços aplicados às variações dos produtos ao longo do tempo.
+<br> <br>
 •	*Troca_Devolucao:* representa ocorrências de troca, devolução ou cancelamento relacionadas aos pedidos online. 
+<br> <br>
 •*	Pedido_Reposicao:* representa os pedidos realizados aos fornecedores para reposição de produtos. 
+<br> <br>
 •	*Item_Pedido_Reposicao:* representa cada produto/variação que faz parte de um pedido de reposição.
 <br><br>
-*Atributos e classificações*
-<br><br>
+<h4>*Atributos e classificações:*</h4>
 Os atributos foram definidos a partir das informações obtidas durante a entrevista e representam os dados necessários para caracterizar as entidades e registrar os processos da organização.
-A entidade *Produto* concentra as informações gerais de cadastro, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais.
-A entidade *Produto_SKU* representa uma variação específica do produto, permitindo associar características como cor e tamanho sem repetir os dados gerais do produto.
-A entidade *Venda* armazena as informações gerais de cada venda, enquanto Item_Venda registra os produtos/variações comercializados, incluindo quantidade, preço unitário e desconto.
-Os *Pedidos_Online* possuem informações próprias do processo de venda pelo site, como status do pedido, status do pagamento, rastreamento, envio e entrega. A venda correspondente utiliza a entidade Item_Venda para registrar os produtos comercializados.
-A entidade *Historico_Preco* armazena o preço aplicado à variação do produto, sua tabela de preço e o período de vigência, permitindo manter o histórico das alterações de preço.
+A entidade 
+<br><br>
+*Produto:* concentra as informações gerais de cadastro, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais.
+<br><br>
+*Produto_SKU:* representa uma variação específica do produto, permitindo associar características como cor e tamanho sem repetir os dados gerais do produto.
+<br><br>
+*Venda:* armazena as informações gerais de cada venda, enquanto Item_Venda registra os produtos/variações comercializados, incluindo quantidade, preço unitário e desconto.
+<br><br>
+*Pedidos_Online:* possue informações próprias do processo de venda pelo site, como status do pedido, status do pagamento, rastreamento, envio e entrega. A venda correspondente utiliza a entidade Item_Venda para registrar os produtos comercializados.
+<br><br>
+*Historico_Preco:* armazena o preço aplicado à variação do produto, sua tabela de preço e o período de vigência, permitindo manter o histórico das alterações de preço.
 <br><br>
 *Relacionamentos pertinentes*
 <br><br>
