@@ -170,7 +170,7 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 | RN08 | Cancelamentos | O cancelamento de um pedido pode ocorrer antes do envio, seguindo o processo definido pela organização para o estorno do pagamento. |
 | RN09 | Histórico de preços | As alterações de preços devem ser registradas de forma que seja possível identificar o valor aplicado à respectiva variação do produto e seu período de vigência. |
 
-*Regras operacionais*
+*Regras Organizacionais*
 <br><br>
 | Código | Regra operacional | Descrição |
 |---|---|---|
