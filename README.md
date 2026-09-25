@@ -217,7 +217,7 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 •**Pedido_Reposicao:** representa os pedidos realizados aos fornecedores para reposição de produtos. 
 <br><br>
 
-<h4>Atributos e classificações:</h4>
+##Atributos e classificações:
 
 Os atributos foram definidos a partir das informações obtidas durante a entrevista e representam os dados necessários para caracterizar as entidades e registrar os processos da organização.
 <br>
@@ -232,8 +232,8 @@ A entidade **Pedidos_Online** possuem informações próprias do processo de ven
 A entidade **Historico_Preco** armazena o preço aplicado à variação do produto, sua tabela de preço e o período de vigência, permitindo manter o histórico das alterações de preço.
 <br><br>
 A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornecedores e mantém relacionamento direto com os produtos/variações que precisam ser repostos.
-<br>
-<h4>Relacionamentos pertinentes</h4>
+
+##Relacionamentos pertinentes
 
 **Os relacionamentos identificados no modelo são:**  
 <br>
@@ -264,7 +264,6 @@ O **Diagrama Entidade-Relacionamento (DER)** está **anexado no repositório**.
 
 > **Imagem do DER: anexada no repositório.**
 
-<br>
 ---
 
 ## 9. Dicionário de Dados
@@ -275,13 +274,12 @@ Ele apresenta as entidades, atributos, chaves primárias (PK), chaves estrangeir
 
 > **Arquivo do Dicionário de Dados: anexado no repositório.**
 
-
 ---
 
 ## 10. Justificativa Técnica do Modelo
 <br>
 A modelagem conceitual foi desenvolvida com o objetivo de organizar as informações da Ansarah de forma estruturada, representando as principais entidades envolvidas nos processos de cadastro, vendas, estoque, preços, pedidos online, reposição e atendimento de ocorrências.<br>
-<br>
+
 A entidade **Produto** concentra as informações gerais dos produtos comercializados pela organização, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. O preço não foi mantido diretamente nessa entidade, pois a organização trabalha com diferentes tabelas de preços e realiza alterações de valores ao longo do tempo.<br>
 
 A entidade **Produto_SKU** foi utilizada para representar as variações específicas dos produtos, permitindo relacioná-las às características de cor e tamanho. Essa estrutura evita a repetição das informações gerais armazenadas em Produto.<br>
@@ -307,7 +305,7 @@ A estrutura proposta busca reduzir a duplicidade de informações, organizar os 
 
 
 ---
-<br>
+
 ## 11. Uso de Inteligência Artificial
 | Item | Registro |
 |---|---|
