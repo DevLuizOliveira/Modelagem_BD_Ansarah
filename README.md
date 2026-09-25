@@ -235,7 +235,7 @@ A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornec
 
 <h4>Relacionamentos pertinentes</h4>
 
-<br><br>
+<br>
 **Os relacionamentos identificados no modelo são:** <br><br>
 • Departamento possui Funcionários; <br>
 • Marca possui Produtos; <br>
@@ -258,7 +258,7 @@ A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornec
 
 ---
 
-### 9. DER Diagrama Entidade-Relacionamento 
+### 8. DER Diagrama Entidade-Relacionamento 
 
 O **Diagrama Entidade-Relacionamento (DER)** está **anexado no repositório**.
 
@@ -267,20 +267,20 @@ O **Diagrama Entidade-Relacionamento (DER)** está **anexado no repositório**.
 <br><br>
 ---
 
-## 10. Dicionário de Dados
+## 9. Dicionário de Dados
 
 O **Dicionário de Dados** está **anexado no repositório**.
 
 Ele apresenta as entidades, atributos, chaves primárias (PK), chaves estrangeiras (FK) e demais informações definidas para o modelo.
 
 > **Arquivo do Dicionário de Dados: anexado no repositório.**
-<br><br>
+<br>
 ---
 
-## 11. Justificativa Técnica do Modelo
+## 10. Justificativa Técnica do Modelo
 <br>
 A modelagem conceitual foi desenvolvida com o objetivo de organizar as informações da Ansarah de forma estruturada, representando as principais entidades envolvidas nos processos de cadastro, vendas, estoque, preços, pedidos online, reposição e atendimento de ocorrências.<br>
-
+<br>
 A entidade **Produto** concentra as informações gerais dos produtos comercializados pela organização, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. O preço não foi mantido diretamente nessa entidade, pois a organização trabalha com diferentes tabelas de preços e realiza alterações de valores ao longo do tempo.<br>
 
 A entidade **Produto_SKU** foi utilizada para representar as variações específicas dos produtos, permitindo relacioná-las às características de cor e tamanho. Essa estrutura evita a repetição das informações gerais armazenadas em Produto.<br>
@@ -306,9 +306,9 @@ A estrutura proposta busca reduzir a duplicidade de informações, organizar os 
 
 
 ---
-<br><br>
+<br>
 
-## 12. Uso de Inteligência Artificial
+## 11. Uso de Inteligência Artificial
 | Item | Registro |
 |---|---|
 | Ferramenta e etapa | ChatGPT — elaboração do questionário para levantamento de requisitos e estruturação/ organização do README |
@@ -323,7 +323,7 @@ A estrutura proposta busca reduzir a duplicidade de informações, organizar os 
 <br><br>
 ---
 
-## 13. Conclusão
+## 12. Conclusão
 A pesquisa realizada com a Ansarah, por meio de perguntas direcionadas à organização, possibilitou compreender os principais processos relacionados ao gerenciamento de suas informações. Foram identificadas atividades envolvendo produtos, variações de produtos, estoque, clientes, funcionários, departamentos, vendas, fornecedores, marcas, preços, pedidos online, pedidos de reposição, trocas, devoluções, relatórios e controle de acesso.<br><br>
 A principal dificuldade identificada está relacionada à inserção manual das informações, especialmente no cadastro de produtos, além da customização de relatórios e da necessidade de correções ou recuperação de dados em determinadas situações.<br><br>
 Com base nessas informações, foi elaborada uma proposta de modelo conceitual que organiza as principais entidades, atributos e relacionamentos identificados durante o levantamento. O modelo considera também as variações dos produtos por meio da entidade Produto_SKU, além dos processos relacionados a vendas, pedidos online, estoque, controle de preços e reposição de produtos.<br><br>
@@ -334,7 +334,7 @@ O modelo conceitual será validado e refinado conforme novas informações sejam
 
 ---
 
-## 14. Referências
+## 13. Referências
 
 - **ANSARAH.** Informações institucionais e comerciais.  
   https://www.ansarah.com.br/
