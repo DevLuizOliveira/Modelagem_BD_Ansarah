@@ -79,7 +79,7 @@ Principais processos mapeados:
 •	Controle de usuários e permissões de acesso. <br>
 <br>
 
-## 4.1 DESCRIÇÃO DOS PRINCIPAIS PROCESSOS
+<h4>DESCRIÇÃO DOS PRINCIPAIS PROCESSOS</h4>
 
 **Cadastro de produtos:** os produtos são cadastrados manualmente no sistema de gestão empresarial utilizando informações fornecidas pelas fábricas, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo, informações fiscais e demais características do produto.
 <br><br>
@@ -129,8 +129,8 @@ Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Re
 | RF18 | O sistema deve permitir gerar relatórios de faturamento, estoque, produtos, marcas, clientes, categorias e comparativos de vendas. |
 | RF19 | O sistema deve permitir controlar usuários e suas permissões de acesso de acordo com o departamento e a função exercida. |
 | RF20 | O sistema deve permitir realizar backups das informações armazenadas e recuperar os dados a partir de uma cópia de segurança quando necessário. |
-
  <br>
+ 
 <h4>Requisitos Não Funcionais</h4>
 
 | Requisito | Descrição |
@@ -178,6 +178,8 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 | RN13 | Permissões de acesso | O acesso às informações do sistema deve respeitar as permissões atribuídas aos funcionários conforme seus departamentos e funções. |
 | RN14 | Proteção dos dados pessoais | As informações pessoais dos clientes devem ser tratadas de acordo com as regras estabelecidas pela LGPD. |
 | RN15 | Reposição de produtos | Os pedidos de reposição devem ser associados a um fornecedor e devem informar as variações dos produtos, quantidades e preços solicitados. |
+
+
 ---
 
 ## 7. Modelo Conceitual (Entidade-Relacionamento-Atributos)
@@ -230,11 +232,8 @@ A entidade **Pedidos_Online** possuem informações próprias do processo de ven
 A entidade **Historico_Preco** armazena o preço aplicado à variação do produto, sua tabela de preço e o período de vigência, permitindo manter o histórico das alterações de preço.
 <br><br>
 A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornecedores e mantém relacionamento direto com os produtos/variações que precisam ser repostos.
-
 <br>
-
 <h4>Relacionamentos pertinentes</h4>
-
 <br>
 **Os relacionamentos identificados no modelo são:** <br><br>
 • Departamento possui Funcionários; <br>
