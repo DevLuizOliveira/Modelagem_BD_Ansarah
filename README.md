@@ -154,17 +154,20 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 
 <h4>Regras operacionais</h4>
 
+### Regras operacionais
+
 | Código | Regra operacional | Descrição |
 |---|---|---|
-| RN01 | Cadastro de produtos | O cadastro de cada produto deve ser realizado no sistema de gestão empresarial utilizando as informações fornecidas pelas fábricas, incluindo código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. |
-| RN02 | Variações de produtos | As variações dos produtos são representadas por meio da entidade PRODUTO_SKU, permitindo relacionar cada produto às respectivas características de cor e tamanho. |
-| RN03 | Controle de estoque | As quantidades disponíveis das variações dos produtos devem ser controladas pelo sistema de gestão empresarial, considerando a integração entre a loja física e o comércio eletrônico.|
-| RN04 | Registro de vendas | Toda venda realizada pela organização deve ser registrada no sistema, contendo os dados da venda e os respectivos itens comercializados. |
-| RN05 | Itens da venda | Cada item de venda deve identificar a variação do produto comercializada, sua quantidade, preço unitário e desconto aplicado. |
-| RN06 | Pedidos online | Os pedidos realizados pelo site devem possuir informações referentes ao pagamento, separação, conferência, faturamento, envio, rastreamento e entrega. |
-| RN07 | Trocas e devoluções | Antes da conclusão de uma troca ou devolução, o produto retornado deve passar por conferência. |
+| RN01 | Cadastro de produtos | O cadastro de produtos é realizado no sistema de gestão empresarial utilizando informações fornecidas pelas fábricas. |
+| RN02 | Informações dos produtos | Os produtos possuem informações relacionadas a características como referência, coleção, subcoleção, grupo, categoria, tipo, marca, cor e tamanho. |
+| RN03 | Variações de produtos | As variações dos produtos são representadas por meio da entidade PRODUTO_SKU, permitindo relacionar cada produto às respectivas características de cor e tamanho. |
+| RN04 | Registro de vendas | As vendas realizadas pela organização devem ser registradas no sistema e relacionadas aos produtos/variações comercializados. |
+| RN05 | Produtos da venda | Cada PRODUTO_SKU relacionado à venda identifica a variação do produto comercializada. |
+| RN06 | Pedidos online | Os pedidos online devem registrar informações referentes ao pagamento, separação, conferência, faturamento, envio, rastreamento e entrega. |
+| RN07 | Trocas e devoluções | As trocas e devoluções devem passar pelo processo de conferência do produto antes da conclusão da operação. |
 | RN08 | Cancelamentos | O cancelamento de um pedido pode ocorrer antes do envio, seguindo o processo definido pela organização para o estorno do pagamento. |
-| RN09 | Histórico de preços | As alterações de preços devem ser registradas de forma que seja possível identificar o valor aplicado à respectiva variação do produto e seu período de vigência.|
+| RN09 | Proteção de dados dos clientes | As informações dos clientes utilizadas nas vendas online devem ser protegidas de acordo com as regras de privacidade aplicáveis. |
+| RN10 | Histórico de preços | Os preços aplicados aos produtos devem ser registrados de acordo com as tabelas de preços utilizadas pela organização e seu respectivo período de vigência. |
 
 <h4>Regras Organizacionais</h4>
 
