@@ -217,7 +217,7 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 •**Pedido_Reposicao:** representa os pedidos realizados aos fornecedores para reposição de produtos. 
 <br><br>
 
-##Atributos e classificações:
+<h4>Atributos e classificações:</h4>
 
 Os atributos foram definidos a partir das informações obtidas durante a entrevista e representam os dados necessários para caracterizar as entidades e registrar os processos da organização.
 <br>
@@ -233,7 +233,7 @@ A entidade **Historico_Preco** armazena o preço aplicado à variação do produ
 <br><br>
 A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornecedores e mantém relacionamento direto com os produtos/variações que precisam ser repostos.
 
-##Relacionamentos pertinentes
+<h4>Relacionamentos pertinentes</h4>
 
 **Os relacionamentos identificados no modelo são:**  
 <br>
