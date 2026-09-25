@@ -95,9 +95,9 @@ Principais processos mapeados:
 <br><br>
 **Trocas e devoluções:** as solicitações são registradas e o produto devolvido passa por conferência antes da conclusão da operação. Quando necessário, é realizado o estorno.
 <br><br>
-*Reposição de produtos:* são registrados pedidos de reposição junto aos fornecedores, contendo os produtos/variações solicitados, suas quantidades, preços e informações relacionadas à entrega.
+**Reposição de produtos:** são registrados pedidos de reposição junto aos fornecedores, contendo os produtos/variações solicitados, suas quantidades, preços e informações relacionadas à entrega.
 
-<br><br>
+<br>
 
 ---
 
@@ -130,7 +130,7 @@ Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Re
 | RF19 | O sistema deve permitir controlar usuários e suas permissões de acesso de acordo com o departamento e a função exercida. |
 | RF20 | O sistema deve permitir realizar backups das informações armazenadas e recuperar os dados a partir de uma cópia de segurança quando necessário. |
 
- 
+ <br>
 <h4>Requisitos Não Funcionais</h4>
 
 | Requisito | Descrição |
@@ -145,6 +145,7 @@ Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Re
 | RNF08 — Compatibilidade | O sistema deve ser acessível por computadores e notebooks, dispositivos utilizados atualmente pela organização. |
 | RNF09 — Desempenho | O sistema deve apresentar tempo de resposta adequado para consultas, registros e geração dos relatórios utilizados na rotina da organização. |
 
+<br><br>
 ---
 
 ## 7. Regras de Negócio
@@ -153,8 +154,6 @@ Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Re
 As regras de negócio foram definidas a partir das informações obtidas durante o levantamento realizado com a representante da Ansarah.
 
 <h4>Regras operacionais</h4>
-
-### Regras operacionais
 
 | Código | Regra operacional | Descrição |
 |---|---|---|
@@ -169,6 +168,7 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 | RN09 | Proteção de dados dos clientes | As informações dos clientes utilizadas nas vendas online devem ser protegidas de acordo com as regras de privacidade aplicáveis. |
 | RN10 | Histórico de preços | Os preços aplicados aos produtos devem ser registrados de acordo com as tabelas de preços utilizadas pela organização e seu respectivo período de vigência. |
 
+<br>
 <h4>Regras Organizacionais</h4>
 
 | Código | Regra operacional | Descrição |
@@ -183,10 +183,9 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 
 ## 8. Modelo Conceitual (Entidade-Relacionamento-Atributos)
 
-Entidades reconhecidas
-<br><br>
+**Entidades reconhecidas**
 A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais: 
-<br>
+<br><br>
 •**Cliente:** representa os clientes cadastrados pela organização.
 <br>
 •**Funcionário:**. representa os funcionários envolvidos nos processos da organização.
@@ -223,22 +222,22 @@ A partir do levantamento realizado com a organização, foram identificadas as s
 Os atributos foram definidos a partir das informações obtidas durante a entrevista e representam os dados necessários para caracterizar as entidades e registrar os processos da organização.
 <br>
 A entidade **Produto** concentra as informações gerais de cadastro, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais.
-<br>
+<br><br>
 A entidade **Produto_SKU** representa uma variação específica do produto, permitindo associar características como cor e tamanho sem repetir os dados gerais do produto.
-<br>
+<br><br>
 A entidade **Venda** registra as informações gerais das vendas realizadas e mantém o relacionamento direto com os produtos/variações comercializados.
-<br>
+<br><br>
 A entidade **Pedidos_Online** possuem informações próprias do processo de venda pelo site, como status do pedido, status do pagamento, rastreamento, envio e entrega. A venda correspondente é registrada na entidade Venda, que está relacionada aos SKUs dos produtos comercializados.
-<br>
+<br><br>
 A entidade **Historico_Preco** armazena o preço aplicado à variação do produto, sua tabela de preço e o período de vigência, permitindo manter o histórico das alterações de preço.
-<br>
+<br><br>
 A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornecedores e mantém relacionamento direto com os produtos/variações que precisam ser repostos.
 
 <br><br>
 
 **Relacionamentos pertinentes**
 <br><br>
-Os relacionamentos identificados no modelo são:<br><br>
+**Os relacionamentos identificados no modelo são:** <br><br>
 • Departamento possui Funcionários; <br>
 • Marca possui Produtos; <br>
 • Produto possui Produto_SKU; <br>
@@ -256,7 +255,7 @@ Os relacionamentos identificados no modelo são:<br><br>
 • Pedido_Reposicao possui Produto_SKU; <br>
 
 
-As cardinalidades são representadas no DER conforme as relações identificadas no levantamento.
+**As cardinalidades são representadas no DER conforme as relações identificadas no levantamento.**
 
 
 ### 9. DER Diagrama Entidade-Relacionamento 
@@ -280,6 +279,7 @@ Ele apresenta as entidades, atributos, chaves primárias (PK), chaves estrangeir
 ## 11. Justificativa Técnica do Modelo
 <br>
 A modelagem conceitual foi desenvolvida com o objetivo de organizar as informações da Ansarah de forma estruturada, representando as principais entidades envolvidas nos processos de cadastro, vendas, estoque, preços, pedidos online, reposição e atendimento de ocorrências.<br><br>
+
 A entidade **Produto** concentra as informações gerais dos produtos comercializados pela organização, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. O preço não foi mantido diretamente nessa entidade, pois a organização trabalha com diferentes tabelas de preços e realiza alterações de valores ao longo do tempo.<br><br>
 
 A entidade **Produto_SKU** foi utilizada para representar as variações específicas dos produtos, permitindo relacioná-las às características de cor e tamanho. Essa estrutura evita a repetição das informações gerais armazenadas em Produto.<br><br>
@@ -324,9 +324,9 @@ A estrutura proposta busca reduzir a duplicidade de informações, organizar os 
 ---
 
 ## 13. Conclusão
-A pesquisa realizada com a Ansarah, por meio de perguntas direcionadas à organização, possibilitou compreender os principais processos relacionados ao gerenciamento de suas informações. Foram identificadas atividades envolvendo produtos, variações de produtos, estoque, clientes, funcionários, departamentos, vendas, fornecedores, marcas, preços, pedidos online, pedidos de reposição, trocas, devoluções, relatórios e controle de acesso.<br>
-A principal dificuldade identificada está relacionada à inserção manual das informações, especialmente no cadastro de produtos, além da customização de relatórios e da necessidade de correções ou recuperação de dados em determinadas situações.<br>
-Com base nessas informações, foi elaborada uma proposta de modelo conceitual que organiza as principais entidades, atributos e relacionamentos identificados durante o levantamento. O modelo considera também as variações dos produtos por meio da entidade Produto_SKU, além dos processos relacionados a vendas, pedidos online, estoque, controle de preços e reposição de produtos.<br>
+A pesquisa realizada com a Ansarah, por meio de perguntas direcionadas à organização, possibilitou compreender os principais processos relacionados ao gerenciamento de suas informações. Foram identificadas atividades envolvendo produtos, variações de produtos, estoque, clientes, funcionários, departamentos, vendas, fornecedores, marcas, preços, pedidos online, pedidos de reposição, trocas, devoluções, relatórios e controle de acesso.<br><br>
+A principal dificuldade identificada está relacionada à inserção manual das informações, especialmente no cadastro de produtos, além da customização de relatórios e da necessidade de correções ou recuperação de dados em determinadas situações.<br><br>
+Com base nessas informações, foi elaborada uma proposta de modelo conceitual que organiza as principais entidades, atributos e relacionamentos identificados durante o levantamento. O modelo considera também as variações dos produtos por meio da entidade Produto_SKU, além dos processos relacionados a vendas, pedidos online, estoque, controle de preços e reposição de produtos.<br><br>
 O modelo conceitual será validado e refinado conforme novas informações sejam obtidas junto à organização. Após sua validação, ele servirá como base para as próximas etapas do projeto, incluindo a elaboração do modelo lógico, a implementação em SQL e o desenvolvimento de consultas ao banco de dados.
 <br><br>
 
