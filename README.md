@@ -234,8 +234,9 @@ A entidade **Historico_Preco** armazena o preço aplicado à variação do produ
 A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornecedores e mantém relacionamento direto com os produtos/variações que precisam ser repostos.
 <br>
 <h4>Relacionamentos pertinentes</h4>
+
+**Os relacionamentos identificados no modelo são:**  
 <br>
-**Os relacionamentos identificados no modelo são:** <br><br>
 • Departamento possui Funcionários; <br>
 • Marca possui Produtos; <br>
 • Produto possui Produto_SKU; <br>
@@ -263,7 +264,7 @@ O **Diagrama Entidade-Relacionamento (DER)** está **anexado no repositório**.
 
 > **Imagem do DER: anexada no repositório.**
 
-<br><br>
+<br>
 ---
 
 ## 9. Dicionário de Dados
@@ -273,7 +274,8 @@ O **Dicionário de Dados** está **anexado no repositório**.
 Ele apresenta as entidades, atributos, chaves primárias (PK), chaves estrangeiras (FK) e demais informações definidas para o modelo.
 
 > **Arquivo do Dicionário de Dados: anexado no repositório.**
-<br>
+
+
 ---
 
 ## 10. Justificativa Técnica do Modelo
@@ -306,7 +308,6 @@ A estrutura proposta busca reduzir a duplicidade de informações, organizar os 
 
 ---
 <br>
-
 ## 11. Uso de Inteligência Artificial
 | Item | Registro |
 |---|---|
