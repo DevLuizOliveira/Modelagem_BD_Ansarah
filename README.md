@@ -145,11 +145,10 @@ Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Re
 | RNF08 — Compatibilidade | O sistema deve ser acessível por computadores e notebooks, dispositivos utilizados atualmente pela organização. |
 | RNF09 — Desempenho | O sistema deve apresentar tempo de resposta adequado para consultas, registros e geração dos relatórios utilizados na rotina da organização. |
 
-<br>
+
 ---
 
-## 7. Regras de Negócio
-
+## 6. Regras de Negócio
 
 As regras de negócio foram definidas a partir das informações obtidas durante o levantamento realizado com a representante da Ansarah.
 
@@ -181,7 +180,7 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 | RN15 | Reposição de produtos | Os pedidos de reposição devem ser associados a um fornecedor e devem informar as variações dos produtos, quantidades e preços solicitados. |
 ---
 
-## 8. Modelo Conceitual (Entidade-Relacionamento-Atributos)
+## 7. Modelo Conceitual (Entidade-Relacionamento-Atributos)
 
 *A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais:*
 <br><br>
@@ -216,7 +215,7 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 •**Pedido_Reposicao:** representa os pedidos realizados aos fornecedores para reposição de produtos. 
 <br><br>
 
-##Atributos e classificações:
+<h4>Atributos e classificações:</h4>
 
 Os atributos foram definidos a partir das informações obtidas durante a entrevista e representam os dados necessários para caracterizar as entidades e registrar os processos da organização.
 <br>
@@ -234,7 +233,7 @@ A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornec
 
 <br>
 
-##Relacionamentos pertinentes
+<h4>Relacionamentos pertinentes</h4>
 
 <br><br>
 **Os relacionamentos identificados no modelo são:** <br><br>
