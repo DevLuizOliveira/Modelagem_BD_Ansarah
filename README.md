@@ -102,7 +102,7 @@ Principais processos mapeados:
 ---
 
 ## 5. Requisitos do Sistema
-Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Requisitos Não Funcionais (RNF) *. Os Requisitos Funcionais representam as funcionalidades e operações que o sistema deve realizar, enquanto os Requisitos Não Funcionais representam características, restrições e condições relacionadas ao funcionamento do sistema, como segurança, desempenho, disponibilidade e recuperação dos dados.
+Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Requisitos Não Funcionais (RNF) *. Os Requisitos Funcionais representam as funcionalidades e operações que o sistema deve realizar, enquanto os Requisitos Não Funcionais representam características, restrições e condições relacionadas ao funcionamento do sistema, como segurança, desempenho, disponibilidade e recuperação dos dados.<br>
 
 
 <h4>Requisitos Funcionais</h4>
@@ -145,7 +145,7 @@ Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Re
 | RNF08 — Compatibilidade | O sistema deve ser acessível por computadores e notebooks, dispositivos utilizados atualmente pela organização. |
 | RNF09 — Desempenho | O sistema deve apresentar tempo de resposta adequado para consultas, registros e geração dos relatórios utilizados na rotina da organização. |
 
-<br><br>
+<br>
 ---
 
 ## 7. Regras de Negócio
@@ -183,8 +183,7 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 
 ## 8. Modelo Conceitual (Entidade-Relacionamento-Atributos)
 
-**Entidades reconhecidas**<br>
-A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais: 
+*A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais:*
 <br><br>
 •**Cliente:** representa os clientes cadastrados pela organização.
 <br>
@@ -215,7 +214,7 @@ A partir do levantamento realizado com a organização, foram identificadas as s
 •	**Troca_Devolucao:** representa ocorrências de troca, devolução ou cancelamento relacionadas aos pedidos online. 
 <br> 
 •**Pedido_Reposicao:** representa os pedidos realizados aos fornecedores para reposição de produtos. 
-<br> 
+<br><br>
 
 ##Atributos e classificações:
 
@@ -233,7 +232,7 @@ A entidade **Historico_Preco** armazena o preço aplicado à variação do produ
 <br><br>
 A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornecedores e mantém relacionamento direto com os produtos/variações que precisam ser repostos.
 
-<br><br>
+<br>
 
 ##Relacionamentos pertinentes
 
