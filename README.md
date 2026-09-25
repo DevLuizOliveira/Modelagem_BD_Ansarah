@@ -1,7 +1,7 @@
 # Modelagem de Banco de Dados para Gestão de Informações da Ansarah
 Projeto acadêmico de modelagem de Banco de Dados da empresa ANSARAH - UNICID
 
-##Integrantes
+## Integrantes
 - **Ana Beatriz Mendes Gonçalves**
 - **Luiz Gustavo Santos de Oliveira**
 - **Samantha Paula dos Santos Silva**
