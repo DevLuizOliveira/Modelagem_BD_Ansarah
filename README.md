@@ -153,21 +153,21 @@ Os requisitos do sistema foram organizados em *Requisitos Funcionais (RF)* e *Re
 As regras de negócio foram definidas a partir das informações obtidas durante o levantamento realizado com a representante da Ansarah.
 
 <h4>Regras operacionais</h4>
-<br><br>
+
 | Código | Regra operacional | Descrição |
 |---|---|---|
 | RN01 | Cadastro de produtos | O cadastro de cada produto deve ser realizado no sistema de gestão empresarial utilizando as informações fornecidas pelas fábricas, incluindo código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. |
 | RN02 | Variações de produtos | As variações dos produtos são representadas por meio da entidade PRODUTO_SKU, permitindo relacionar cada produto às respectivas características de cor e tamanho. |
-| RN03 | Controle de estoque | As quantidades disponíveis das variações dos produtos devem ser controladas pelo sistema de gestão empresarial, considerando a integração entre a loja física e o comércio eletrônico. |
+| RN03 | Controle de estoque | As quantidades disponíveis das variações dos produtos devem ser controladas pelo sistema de gestão empresarial, considerando a integração entre a loja física e o comércio eletrônico.|
 | RN04 | Registro de vendas | Toda venda realizada pela organização deve ser registrada no sistema, contendo os dados da venda e os respectivos itens comercializados. |
 | RN05 | Itens da venda | Cada item de venda deve identificar a variação do produto comercializada, sua quantidade, preço unitário e desconto aplicado. |
 | RN06 | Pedidos online | Os pedidos realizados pelo site devem possuir informações referentes ao pagamento, separação, conferência, faturamento, envio, rastreamento e entrega. |
 | RN07 | Trocas e devoluções | Antes da conclusão de uma troca ou devolução, o produto retornado deve passar por conferência. |
 | RN08 | Cancelamentos | O cancelamento de um pedido pode ocorrer antes do envio, seguindo o processo definido pela organização para o estorno do pagamento. |
-| RN09 | Histórico de preços | As alterações de preços devem ser registradas de forma que seja possível identificar o valor aplicado à respectiva variação do produto e seu período de vigência. |
+| RN09 | Histórico de preços | As alterações de preços devem ser registradas de forma que seja possível identificar o valor aplicado à respectiva variação do produto e seu período de vigência.|
 
 <h4>Regras Organizacionais</h4>
-<br><br>
+
 | Código | Regra operacional | Descrição |
 |---|---|---|
 | RN10 | Prazos de troca | Os prazos e condições para trocas devem seguir as disposições aplicáveis do Código de Defesa do Consumidor. |
