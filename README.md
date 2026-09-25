@@ -235,7 +235,8 @@ A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornec
 
 <br><br>
 
-**Relacionamentos pertinentes**
+###<h4>Relacionamentos pertinentes</h4>
+
 <br><br>
 **Os relacionamentos identificados no modelo são:** <br><br>
 • Departamento possui Funcionários; <br>
@@ -257,6 +258,7 @@ A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornec
 
 **As cardinalidades são representadas no DER conforme as relações identificadas no levantamento.**
 
+---
 
 ### 9. DER Diagrama Entidade-Relacionamento 
 
@@ -264,6 +266,7 @@ O **Diagrama Entidade-Relacionamento (DER)** está **anexado no repositório**.
 
 > **Imagem do DER: anexada no repositório.**
 
+<br><br>
 ---
 
 ## 10. Dicionário de Dados
@@ -273,31 +276,31 @@ O **Dicionário de Dados** está **anexado no repositório**.
 Ele apresenta as entidades, atributos, chaves primárias (PK), chaves estrangeiras (FK) e demais informações definidas para o modelo.
 
 > **Arquivo do Dicionário de Dados: anexado no repositório.**
-
+<br><br>
 ---
 
 ## 11. Justificativa Técnica do Modelo
 <br>
-A modelagem conceitual foi desenvolvida com o objetivo de organizar as informações da Ansarah de forma estruturada, representando as principais entidades envolvidas nos processos de cadastro, vendas, estoque, preços, pedidos online, reposição e atendimento de ocorrências.<br><br>
+A modelagem conceitual foi desenvolvida com o objetivo de organizar as informações da Ansarah de forma estruturada, representando as principais entidades envolvidas nos processos de cadastro, vendas, estoque, preços, pedidos online, reposição e atendimento de ocorrências.<br>
 
-A entidade **Produto** concentra as informações gerais dos produtos comercializados pela organização, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. O preço não foi mantido diretamente nessa entidade, pois a organização trabalha com diferentes tabelas de preços e realiza alterações de valores ao longo do tempo.<br><br>
+A entidade **Produto** concentra as informações gerais dos produtos comercializados pela organização, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo e informações fiscais. O preço não foi mantido diretamente nessa entidade, pois a organização trabalha com diferentes tabelas de preços e realiza alterações de valores ao longo do tempo.<br>
 
-A entidade **Produto_SKU** foi utilizada para representar as variações específicas dos produtos, permitindo relacioná-las às características de cor e tamanho. Essa estrutura evita a repetição das informações gerais armazenadas em Produto.<br><br>
-As entidades **Cor e Tamanho** foram separadas para permitir que essas características sejam reutilizadas em diferentes variações de produtos.<br><br>
+A entidade **Produto_SKU** foi utilizada para representar as variações específicas dos produtos, permitindo relacioná-las às características de cor e tamanho. Essa estrutura evita a repetição das informações gerais armazenadas em Produto.<br>
+As entidades **Cor e Tamanho** foram separadas para permitir que essas características sejam reutilizadas em diferentes variações de produtos.<br>
 
-A entidade **Venda** representa as vendas realizadas pela organização e mantém relacionamento direto com Produto_SKU, permitindo identificar os produtos/variações comercializados em cada venda.<br><br>
+A entidade **Venda** representa as vendas realizadas pela organização e mantém relacionamento direto com Produto_SKU, permitindo identificar os produtos/variações comercializados em cada venda.<br>
 
-A entidade **Pedido_Online** representa as informações específicas dos pedidos realizados pelo site, como status, pagamento, rastreamento, envio e entrega. Como a organização utiliza os mesmos registros de itens para representar os produtos comercializados, o pedido online é associado à venda correspondente.<br><br>
+A entidade **Pedido_Online** representa as informações específicas dos pedidos realizados pelo site, como status, pagamento, rastreamento, envio e entrega. Como a organização utiliza os mesmos registros de itens para representar os produtos comercializados, o pedido online é associado à venda correspondente.<br>
 
-Da mesma forma, a entidade **Pedido_Reposicao** mantém relacionamento direto com Produto_SKU, permitindo representar os produtos/variações solicitados aos fornecedores para reposição.<br><br>
+Da mesma forma, a entidade **Pedido_Reposicao** mantém relacionamento direto com Produto_SKU, permitindo representar os produtos/variações solicitados aos fornecedores para reposição.<br>
 
-A entidade **Tabela_Preco** foi criada para representar as diferentes tabelas de preços utilizadas pela organização, considerando características como canal de venda e tipo de cliente. A entidade **Historico_Preco** registra os valores aplicados aos produtos ao longo do tempo, permitindo identificar o preço utilizado em determinado período.<br><br>
+A entidade **Tabela_Preco** foi criada para representar as diferentes tabelas de preços utilizadas pela organização, considerando características como canal de venda e tipo de cliente. A entidade **Historico_Preco** registra os valores aplicados aos produtos ao longo do tempo, permitindo identificar o preço utilizado em determinado período.<br>
 
-As entidades **Fornecedor** e **Pedido_Reposicao** representam o processo de reposição de produtos. O **Pedido_Reposicao** registra a solicitação realizada junto ao fornecedor e está relacionado ao **Produto_SKU**, identificando a variação do produto que será reposta.<br><br>
+As entidades **Fornecedor** e **Pedido_Reposicao** representam o processo de reposição de produtos. O **Pedido_Reposicao** registra a solicitação realizada junto ao fornecedor e está relacionado ao **Produto_SKU**, identificando a variação do produto que será reposta.<br>
 
-A entidade **Troca_Devolucao** registra ocorrências relacionadas aos pedidos online, como trocas, devoluções e cancelamentos, permitindo armazenar informações como motivo, data, status e valor de estorno quando aplicável.<br><br>
+A entidade **Troca_Devolucao** registra ocorrências relacionadas aos pedidos online, como trocas, devoluções e cancelamentos, permitindo armazenar informações como motivo, data, status e valor de estorno quando aplicável.<br>
 
-A entidade **Funcionario** foi relacionada à entidade **Departamento**, permitindo representar a distribuição dos funcionários pelos diferentes setores da organização. A entidade Cliente permite relacionar os clientes às vendas e aos pedidos online realizados.<br><br>
+A entidade **Funcionario** foi relacionada à entidade **Departamento**, permitindo representar a distribuição dos funcionários pelos diferentes setores da organização. A entidade Cliente permite relacionar os clientes às vendas e aos pedidos online realizados.<br>
 As chaves primárias (PK) identificam exclusivamente os registros de cada entidade. As chaves estrangeiras (FK), presentes no dicionário como referência para uma futura implementação relacional, representam as ligações entre as entidades. No modelo conceitual, essas ligações são representadas principalmente por meio dos relacionamentos e suas respectivas cardinalidades.<br>
 
 A estrutura proposta busca reduzir a duplicidade de informações, organizar os dados de acordo com os processos identificados na organização e permitir futuras expansões do sistema.
@@ -305,6 +308,7 @@ A estrutura proposta busca reduzir a duplicidade de informações, organizar os 
 
 
 ---
+<br><br>
 
 ## 12. Uso de Inteligência Artificial
 | Item | Registro |
@@ -318,9 +322,7 @@ A estrutura proposta busca reduzir a duplicidade de informações, organizar os 
 | Justificativa da escolha final | A versão final será definida pelo grupo com base na pesquisa de campo e nas orientações da disciplina. |
 | Reflexão crítica | A IA foi utilizada como ferramenta de apoio, organização e escrita, mas suas sugestões não foram consideradas como informações definitivas sobre a empresa. As respostas da entrevista e as decisões do grupo foram utilizadas para validar e adaptar o conteúdo. |
 
-
-
-
+<br><br>
 ---
 
 ## 13. Conclusão
