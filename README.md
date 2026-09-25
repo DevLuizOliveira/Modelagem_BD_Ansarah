@@ -183,7 +183,7 @@ As regras de negócio foram definidas a partir das informações obtidas durante
 
 ## 8. Modelo Conceitual (Entidade-Relacionamento-Atributos)
 
-**Entidades reconhecidas**
+**Entidades reconhecidas**<br>
 A partir do levantamento realizado com a organização, foram identificadas as seguintes entidades principais: 
 <br><br>
 •**Cliente:** representa os clientes cadastrados pela organização.
@@ -217,7 +217,7 @@ A partir do levantamento realizado com a organização, foram identificadas as s
 •**Pedido_Reposicao:** representa os pedidos realizados aos fornecedores para reposição de produtos. 
 <br> 
 
-**<h4>Atributos e classificações:</h4>**
+##Atributos e classificações:
 
 Os atributos foram definidos a partir das informações obtidas durante a entrevista e representam os dados necessários para caracterizar as entidades e registrar os processos da organização.
 <br>
@@ -235,7 +235,7 @@ A entidade **Pedido_Reposicao** registra as solicitações realizadas aos fornec
 
 <br><br>
 
-###<h4>Relacionamentos pertinentes</h4>
+##Relacionamentos pertinentes
 
 <br><br>
 **Os relacionamentos identificados no modelo são:** <br><br>
