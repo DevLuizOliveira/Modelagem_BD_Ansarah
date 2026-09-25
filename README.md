@@ -77,9 +77,9 @@ Principais processos mapeados:
 •	Registro e acompanhamento de pedidos de reposição; <br>
 •	Geração de relatórios; <br> 
 •	Controle de usuários e permissões de acesso. <br>
-<br><br>
+<br>
 
-### 4.1 DESCRIÇÃO DOS PRINCIPAIS PROCESSOS
+## 4.1 DESCRIÇÃO DOS PRINCIPAIS PROCESSOS
 
 **Cadastro de produtos:** os produtos são cadastrados manualmente no sistema de gestão empresarial utilizando informações fornecidas pelas fábricas, como código, descrição, referência, coleção, subcoleção, grupo, categoria, tipo, informações fiscais e demais características do produto.
 <br><br>
