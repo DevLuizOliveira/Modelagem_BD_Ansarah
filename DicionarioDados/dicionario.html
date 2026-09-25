@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dicionário de Dados - Ansarah</title>
+    <title>Dicionário de Dados - LOJA Ansarah</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,16 +21,6 @@
     </div>
 </header>
 
-
-<nav class="menu">
-    <a href="dicionario.html" class="ativo">
-        Dicionário de Dados
-    </a>
-
-    <a href="relacionamentos.html">
-        Relacionamentos e Cardinalidades
-    </a>
-</nav>
 
 
 <main class="container">
@@ -98,7 +88,7 @@
                     <tr>
                         <td>Cnpj_cliente</td>
                         <td>VARCHAR(14)</td>
-                        <td>Número do Registro Geral do cliente.</td>
+                        <td>Número do Cadastro Nacional da Pessoa Jurídica (CNPJ) do cliente.</td>
                         <td>UNIQUE</td>
                     </tr>
 
@@ -457,7 +447,7 @@
 
                     <tr>
                         <td>Id_tamanho</td>
-                        <td></td>
+                        <td>INT</td>
                         <td>Identifica o tamanho associado à variação do produto.</td>
                         <td><span class="fk">FK / Obrigatório</span></td>
                     </tr>
@@ -481,6 +471,18 @@
                         <td>DECIMAL(10,2)</td>
                         <td>Comprimento cadastrado do produto.</td>
                         <td>Conforme cadastro</td>
+                    </tr>
+                    <tr>
+                        <td>quantidade_estoque</td>
+                        <td>INT</td>
+                        <td>Representa a quantidade disponível daquela variação do produto em estoque.</td>
+                        <td>NOT NULL, CHECK (quantidade_estoque >= 0)</td>
+                    </tr>
+                      <tr>
+                        <td>data_atualizacao_estoque</td>
+                        <td>DATETIME</td>
+                        <td>Indica a data e o horário em que a quantidade disponível daquela variação foi atualizada.</td>
+                        <td>NOT NULL</td>
                     </tr>
 
                 </tbody>
@@ -592,12 +594,6 @@
                         <td>Conforme cadastro</td>
                     </tr>
 
-                    <tr>
-                        <td>id_reposicao</td>
-                        <td>INTEGER</td>
-                        <td>Identificador único do pedido de compra.</td>
-                        <td><span class="fk">FK / Obrigatório</span></td>
-                    </tr>
 
                 </tbody>
 
@@ -710,70 +706,6 @@
         </div>
 
     </section>
-
-
-    <!-- ================================================= -->
-    <!-- ESTOQUE -->
-    <!-- ================================================= -->
-
-    <section class="entidade">
-
-        <h3>Entidade: ESTOQUE</h3>
-
-        <div class="tabela-container">
-
-            <table>
-
-                <thead>
-                    <tr>
-                        <th>Nome do Campo</th>
-                        <th>Tipo de Dado</th>
-                        <th>Descrição</th>
-                        <th>Restrição / Chave</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>id_estoque</td>
-                        <td>INT</td>
-                        <td>Identificador único do registro de estoque.</td>
-                        <td><span class="pk">PK / Obrigatório</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>quantidade_estoque</td>
-                        <td>INT</td>
-                        <td>Quantidade registrada do produto disponível em estoque.</td>
-                        <td>Obrigatório</td>
-                    </tr>
-
-                    <tr>
-                        <td>data_atualizacao</td>
-                        <td>DATE</td>
-                        <td>Data da última atualização do estoque.</td>
-                        <td>Obrigatório</td>
-                    </tr>
-
-                    <tr>
-                        <td>id_sku</td>
-                        <td>INT</td>
-                        <td>
-                            Identifica a variação do produto relacionada ao registro de estoque.
-                        </td>
-                        <td><span class="fk">FK / Obrigatório</span></td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </section>
-
-
     <!-- ================================================= -->
     <!-- VENDA -->
     <!-- ================================================= -->
@@ -838,7 +770,24 @@
                         <td>Situação atual da venda.</td>
                         <td>Conforme processo</td>
                     </tr>
-
+                       <tr>
+                        <td>quantidade_venda</td>
+                        <td>INT</td>
+                        <td>Registra a quantidade do SKU comercializada na venda.</td>
+                        <td>NOT NULL, CHECK (quantidade_venda > 0)</td>
+                    </tr>
+                         <tr>
+                        <td>preco_unitario_venda</td>
+                        <td>DECIMAL(10,2)</td>
+                        <td>Permite registrar o preço pelo qual cada unidade do SKU foi vendida.</td>
+                        <td>NOT NULL, CHECK (preco_unitario_venda >= 0)</td>
+                    </tr>
+                    <tr>
+                        <td>id_sku</td>
+                       <td>INTEGER</td>
+                        <td> Identificador do SKU relacionado à venda.</td>
+                        <td><span class="fk">Chave Estrangeira (FK)</span></td>
+                    </tr>
                     <tr>
                         <td>id_cliente</td>
                         <td>INT</td>
@@ -961,84 +910,8 @@
         </div>
 
     </section>
-
-
     <!-- ================================================= -->
-    <!-- ITEM VENDA -->
-    <!-- ================================================= -->
-
-    <section class="entidade">
-
-        <h3>Entidade: ITEM_VENDA</h3>
-
-        <div class="tabela-container">
-
-            <table>
-
-                <thead>
-                    <tr>
-                        <th>Nome do Campo</th>
-                        <th>Tipo de Dado</th>
-                        <th>Descrição</th>
-                        <th>Restrição / Chave</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>id_item_venda</td>
-                        <td>INT</td>
-                        <td>Identificador único do item da venda.</td>
-                        <td><span class="pk">PK / Obrigatório</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>quantidade_item_venda</td>
-                        <td>INT</td>
-                        <td>Quantidade do produto incluída no venda.</td>
-                        <td>Obrigatório</td>
-                    </tr>
-
-                    <tr>
-                        <td>preco_unitario_item_venda</td>
-                        <td>DECIMAL(10,2)</td>
-                        <td>Preço do produto no momento da realização da venda.</td>
-                        <td>Obrigatório</td>
-                    </tr>
-
-                    <tr>
-                        <td>desconto_item_venda</td>
-                        <td>DECIMAL(10,2)</td>
-                        <td>Desconto aplicado ao item da venda.</td>
-                        <td>Conforme regra de desconto</td>
-                    </tr>
-
-                    <tr>
-                        <td>id_venda</td>
-                        <td>INT</td>
-                        <td>Identifica a venda ao qual o item pertence.</td>
-                        <td><span class="fk">FK / Obrigatório</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>id_sku</td>
-                        <td>INT</td>
-                        <td>Identifica o produto incluído na venda.</td>
-                        <td><span class="fk">FK / Obrigatório</span></td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================================================= -->
-    <!-- TABELA PRECO -->
+    <!-- TABELA_PRECO -->
     <!-- ================================================= -->
 
     <section class="entidade">
@@ -1182,7 +1055,7 @@
                         <td>preco_produto</td>
                         <td>DECIMAL(10,2)</td>
                         <td>Preço do produto cadastrado.</td>
-                        <td>Preço do produto cadastrado.</td>
+                        <td>NOT NULL, CHECK (preco_historico >= 0)</td>
                     </tr>
 
                 </tbody>
@@ -1328,7 +1201,24 @@
                         <td>Data prevista para recebimento dos produtos solicitados.</td>
                         <td>Opcional</td>
                     </tr>
-
+                    <tr>
+                        <td>quantidade_reposicao</td>
+                        <td>INT</td>
+                        <td>Registra a quantidade do SKU que está sendo solicitada no pedido de reposição.</td>
+                        <td>NOT NULL, CHECK (quantidade_reposicao > 0)</td>
+                    </tr>
+                    <tr>
+                        <td>preco_unitario_reposicao</td>
+                        <td>DECIMAL(10,2)</td>
+                        <td>Registra o preço negociado ou solicitado para cada unidade do SKU na reposição.</td>
+                        <td>NOT NULL, CHECK (preco_unitario_reposicao >= 0)</td>
+                    </tr>
+                    <tr>
+                        <td>id_sku</td>
+                        <td>INTEGER</td>
+                        <td>Identificador do SKU relacionado ao pedido de reposição.</td>
+                        <td><span class="fk">Chave Estrangeira (FK)</span></td>
+                    </tr>
                     <tr>
                         <td>Id_fornecedor</td>
                         <td>INTEGER</td>
@@ -1345,93 +1235,6 @@
         </div>
 
     </section>
-
-
-    <!-- ================================================= -->
-    <!-- ITEM PEDIDO REPOSICAO -->
-    <!-- ================================================= -->
-
-    <section class="entidade">
-
-        <h3>ITEM_PEDIDO_REPOSICAO</h3>
-
-        <div class="tabela-container">
-
-            <table>
-
-                <thead>
-                    <tr>
-                        <th>Nome do Campo</th>
-                        <th>Tipo de Dado</th>
-                        <th>Descrição</th>
-                        <th>Restrição / Chave</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>id_item_reposicao</td>
-                        <td>INTEGER</td>
-                        <td>
-                            Identificador único do item registrado no pedido de reposição.
-                        </td>
-                        <td><span class="pk">PK / Obrigatório</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>quantidade_reposicao</td>
-                        <td>INTEGER</td>
-                        <td>
-                            Quantidade de unidades do produto solicitada ao fornecedor.
-                        </td>
-                        <td>Obrigatório</td>
-                    </tr>
-
-                    <tr>
-                        <td>preco_unitario_reposicao</td>
-                        <td>DECIMAL(10,2)</td>
-                        <td>
-                            Preço unitário do produto informado no pedido de reposição.
-                        </td>
-                        <td>Obrigatório</td>
-                    </tr>
-
-                    <tr>
-                        <td>id_pedido_reposicao</td>
-                        <td>INTEGER</td>
-                        <td>
-                            Identifica o pedido de reposição ao qual o item pertence.
-                        </td>
-                        <td><span class="fk">FK / Obrigatório</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>id_sku</td>
-                        <td>INTEGER</td>
-                        <td>
-                            Identifica a variação do produto solicitada,
-                            quando houver controle por SKU.
-                        </td>
-                        <td><span class="fk">FK / Obrigatório</span></td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </section>
-
-
-    <!-- AQUI TERMINA A PÁGINA 1 -->
-
-    <div class="proxima-pagina">
-        <a href="relacionamentos.html">
-            Ir para Relacionamentos e Cardinalidades →
-        </a>
-    </div>
 
 </main>
 
